@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter_Tight, Poppins } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
   subsets: ["latin"],
-  weights: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: "400"
 });
 
 export const metadata: Metadata = {
