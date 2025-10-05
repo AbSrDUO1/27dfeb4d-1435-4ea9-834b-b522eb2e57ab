@@ -1,4 +1,4 @@
-use client
+"use client";
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
 import NavbarBase from '@/components/navigation/NavbarBase';
 import BillboardHero from '@/components/sections/layouts/hero/BillboardHero';
