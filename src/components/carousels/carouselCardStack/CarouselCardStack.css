@@ -1,0 +1,22 @@
+[data-flick-cards-dragger] {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: auto;
+  touch-action: pan-y;
+}
+
+[data-flick-cards-item-status] .flick-card__media {
+  transition: opacity 0.2s ease;
+  opacity: 0.5;
+}
+
+[data-flick-cards-item-status="2-before"] .flick-card__media,
+[data-flick-cards-item-status="2-after"] .flick-card__media {
+  transition: opacity 0.2s ease;
+  opacity: 0.75;
+}
+
+[data-flick-cards-item-status="active"] .flick-card__media {
+  opacity: 1;
+}

@@ -1,0 +1,51 @@
+.rotating-icon-button-content-text,
+.rotating-icon-button-content-bg,
+.rotating-icon-button-icon-bg,
+.rotating-icon-button-icon-arrow {
+  transition: transform 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.rotating-icon-button-icon-bg {
+  transition: transform 0.525s cubic-bezier(0.625, 0.05, 0, 1), background-color 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.rotating-icon-button-icon-wrap {
+  transition: color 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.rotating-icon-button-icon-arrow {
+  transition: transform 0.525s cubic-bezier(0.625, 0.05, 0, 1), color 0.525s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.rotating-icon-button-content-text {
+  --text-duplicate-distance: calc(1.5*var(--text-sm));
+  text-shadow: 0px var(--text-duplicate-distance) white;
+}
+
+.rotating-icon-button-content-bg {
+  transform: translate(0, 175%) rotate(15deg);
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .rotating-icon-button:hover .rotating-icon-button-content-text { 
+    transform: translate(0px, calc(-1 * var(--text-duplicate-distance))); 
+  }
+    
+  .rotating-icon-button:hover .rotating-icon-button-icon-bg { 
+    transform: rotate(90deg);
+    background-color: white;
+  }
+  
+  .rotating-icon-button:hover .rotating-icon-button-icon-wrap {
+    color: black;
+  }
+  
+  .rotating-icon-button:hover .rotating-icon-button-icon-arrow { 
+    transform: translate(200%, 0px);
+    color: black !important;
+  }
+  
+  .rotating-icon-button:hover .rotating-icon-button-content-bg { 
+    transform: translate(0px, 0%) rotate(0deg); 
+  }
+}

@@ -1,0 +1,49 @@
+.aurora-background {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  opacity: 0.2;
+  pointer-events: none;
+  --stripesDark: repeating-linear-gradient(
+    100deg,
+    #000000 0%,
+    #000000 7%,
+    transparent 10%,
+    transparent 12%,
+    #000000 16%
+  );
+  --rainbow: repeating-linear-gradient(
+    100deg,
+    rgba(0, 149, 255, 1) 10%,
+    rgba(0, 149, 255, 0.25) 15%,
+    rgba(0, 149, 255, 0.5) 20%,
+    rgba(0, 149, 255, 1) 25%,
+    rgba(0, 149, 255, 0.75) 30%
+  );
+  background-image: var(--stripesDark), var(--rainbow);
+  background-size: 300%, 200%;
+  background-position: 50% 50%, 50% 50%;
+  mask-image: radial-gradient(ellipse at 100% 0%, #000000 40%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 100% 0%, #000000 40%, transparent 70%);
+}
+
+.aurora-background-inner {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: difference;
+  background-image: var(--stripesDark), var(--rainbow);
+  background-size: 200%, 100%;
+  animation: aurora-animation 60s linear infinite;
+  background-attachment: fixed;
+}
+
+@keyframes aurora-animation {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}

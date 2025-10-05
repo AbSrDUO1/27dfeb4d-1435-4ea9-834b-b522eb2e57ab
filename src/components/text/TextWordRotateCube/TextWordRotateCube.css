@@ -1,0 +1,41 @@
+@keyframes cubeRotate {
+  0%, 18% {
+    transform: rotateX(0deg);
+  }
+  25%, 43% {
+    transform: rotateX(90deg);
+  }
+  50%, 68% {
+    transform: rotateX(180deg);
+  }
+  75%, 93% {
+    transform: rotateX(270deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.container {
+  transform-style: preserve-3d;
+}
+
+.face {
+  transform-style: preserve-3d;
+}
+
+.face:nth-child(1) {
+  transform: rotateX(0deg) translateZ(calc(var(--height-30) / 2));
+}
+
+.face:nth-child(2) {
+  transform: rotateX(90deg) translateZ(calc(var(--height-30) / 2));
+}
+
+.face:nth-child(3) {
+  transform: rotateX(180deg) translateZ(calc(var(--height-30) / 2));
+}
+
+.face:nth-child(4) {
+  transform: rotateX(270deg) translateZ(calc(var(--height-30) / 2));
+}

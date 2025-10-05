@@ -1,0 +1,82 @@
+.info-reveal-title {
+    font-size: var(--text-2xl);
+}
+
+.info-reveal-description {
+    font-size: var(--text-sm);
+}
+
+.info-reveal-bento-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.info-reveal-bento-container .info-reveal-bento-item:nth-child(1),
+.info-reveal-bento-container .info-reveal-bento-item:nth-child(2),
+.info-reveal-bento-container .info-reveal-bento-item:nth-child(3),
+.info-reveal-bento-container .info-reveal-bento-item:nth-child(4) {
+    grid-row: 1;
+}
+
+.info-reveal-bento-container .info-reveal-bento-item:nth-child(5) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.info-reveal-bento-container-1 {
+    grid-template-columns: 1fr;
+}
+
+.info-reveal-bento-container-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.info-reveal-bento-container-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.info-reveal-bento-container-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.info-reveal-bento-container-repeating {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-flow: row;
+}
+
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(1),
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(2),
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(3),
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(4) {
+    grid-column: span 3;
+}
+
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(5) {
+    grid-column: 1 / -1;
+}
+
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(6) {
+    grid-column: 1 / -1;
+}
+
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(7),
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(8) {
+    grid-column: span 6;
+}
+
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(9),
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(10),
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(11) {
+    grid-column: span 4;
+}
+
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(12),
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(13),
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(14),
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(15) {
+    grid-column: span 3;
+}
+
+.info-reveal-bento-container-repeating .info-reveal-bento-item:nth-child(16) {
+    grid-column: 1 / -1;
+}

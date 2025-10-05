@@ -1,0 +1,483 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-playfair {
+    font-family: var(--font-playfair);
+  }
+
+  .animate-pulse-scale {
+    animation: pulse-scale 2s ease-in-out 0.5s infinite;
+  }
+
+  @keyframes pulse-scale {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(0.7);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .futuristic-card-bg {
+    background: radial-gradient(57.89% 132% at 65.79% -35%, rgba(120, 123, 255, .06) 0%, rgba(120, 123, 255, 0) 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0) 54.17%, rgba(255, 255, 255, .04) 100%),
+      rgba(255, 255, 255, .01);
+  }
+
+  .futuristic-template-1-card-bg {
+    background: radial-gradient(57.89% 132% at 65.79% -35%, var(--color-futuristic-template-1-card-accent) 0%, transparent 100%),
+      linear-gradient(180deg, transparent 54.17%, rgba(255, 255, 255, .04) 100%),
+      rgba(255, 255, 255, .01);
+  }
+
+  .futuristic-template-2-card-bg {
+    background: radial-gradient(57.89% 132% at 65.79% -35%, var(--color-futuristic-template-2-card-accent) 0%, transparent 100%),
+      linear-gradient(180deg, transparent 54.17%, rgba(255, 255, 255, .04) 100%),
+      rgba(255, 255, 255, .01);
+  }
+
+  .futuristic-card-border {
+    @apply relative rounded;
+  }
+
+  .futuristic-card-border::before {
+    content: "";
+    @apply absolute pointer-events-none inset-0 rounded-md p-[1px];
+    background: linear-gradient(180deg, rgba(255, 255, 255, .04) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .04));
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  .text-gradient-white {
+    background-image: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.5) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+}
+
+:root {
+  /* Base units */
+  --vw: clamp(0.5rem, 0.8vw, 1rem);
+
+  /* colors */
+  --background: #f5f8ff;
+  --foreground: #171717;
+  --color-transparent-grey: #f8f9f8;
+  --color-off-white: rgba(255, 255, 255, 0.45);
+  --color-grey: #eee;
+  --color-blue: #5A71E6;
+
+  /* Fun Color Template 1 */
+  --color-fun-template-1-primary: #2c8fca;
+  --color-fun-template-1-secondary: #ff8b8b;
+  --color-fun-template-1-tertiary: #ffe0b2;
+  --color-fun-template-1-accent: #7ca9fe;
+  --color-fun-template-1-button: #7ca9fe;
+  --color-fun-template-1-button-hover: #04132a;
+  --color-fun-template-1-button-hover-text: #cefafe;
+
+  /* Fun Color Template 2 */
+  --color-fun-template-2-primary: #937ecd;
+  --color-fun-template-2-secondary: #cfffd7;
+  --color-fun-template-2-tertiary: #f8c9fe;
+  --color-fun-template-2-accent: #7ca9fe;
+  --color-fun-template-2-button: #7ca9fe;
+  --color-fun-template-2-button-hover: #04132a;
+  --color-fun-template-2-button-hover-text: #cefafe;
+
+  /* Futuristic Color Template 1 */
+  --color-futuristic-template-1-primary: #030014;
+  --color-futuristic-template-1-gradient-linear: #7538c2;
+  --color-futuristic-template-1-card-accent: rgba(120, 123, 255, .06);
+  --color-futuristic-template-1-spotlight: rgba(117, 56, 194, 0.16);
+
+  /* Futuristic Color Template 2 */
+  --color-futuristic-template-2-primary: #000414;
+  --color-futuristic-template-2-gradient-linear: #003caa;
+  --color-futuristic-template-2-card-accent: rgba(8, 94, 255, 0.06);
+  --color-futuristic-template-2-spotlight: rgba(0, 60, 170, 0.16);
+
+  /* Futuristic Base Colors */
+  --color-futuristic-secondary: #141414;
+
+  /* text sizing */
+  --text-2xs: clamp(0.465rem, 0.62vw, 0.62rem);
+  --text-xs: clamp(0.54rem, 0.72vw, 0.72rem);
+  --text-sm: clamp(0.615rem, 0.82vw, 0.82rem);
+  --text-base: clamp(0.69rem, 0.92vw, 0.92rem);
+  --text-lg: clamp(0.75rem, 1vw, 1rem);
+  --text-xl: clamp(0.9375rem, 1.25vw, 1.25rem);
+  --text-2xl: clamp(1.125rem, 1.5vw, 1.5rem);
+  --text-3xl: clamp(1.3125rem, 1.75vw, 1.75rem);
+  --text-4xl: clamp(1.6875rem, 2.25vw, 2.25rem);
+  --text-5xl: clamp(2.25rem, 3vw, 3rem);
+  --text-6xl: clamp(2.625rem, 3.5vw, 3.5rem);
+  --text-7xl: clamp(3.375rem, 4.5vw, 4.5rem);
+  --text-8xl: clamp(4.5rem, 6vw, 6rem);
+  --text-9xl: clamp(10rem, 15vw, 18rem);
+
+  /* Base spacing units */
+  --vw-0_25: calc(var(--vw) * 0.25);
+  --vw-0_5: calc(var(--vw) * 0.5);
+  --vw-0_625: calc(var(--vw) * 0.625);
+  --vw-0_75: calc(var(--vw) * 0.75);
+  --vw-1: calc(var(--vw) * 1);
+  --vw-1_25: calc(var(--vw) * 1.25);
+  --vw-1_5: calc(var(--vw) * 1.5);
+  --vw-1_75: calc(var(--vw) * 1.75);
+  --vw-2: calc(var(--vw) * 2);
+  --vw-2_25: calc(var(--vw) * 2.25);
+  --vw-2_5: calc(var(--vw) * 2.5);
+  --vw-2_75: calc(var(--vw) * 2.75);
+  --vw-3: calc(var(--vw) * 3);
+
+  /* width */
+  --width-5: clamp(4rem, 5vw, 6rem);
+  --width-10: clamp(7.5rem, 10vw, 10rem);
+  --width-15: clamp(11.25rem, 15vw, 15rem);
+  --width-17: clamp(12.75rem, 17vw, 17rem);
+  --width-20: clamp(15rem, 20vw, 20rem);
+  --width-21: clamp(15.75rem, 21vw, 21rem);
+  --width-22_5: clamp(16.875rem, 22.5vw, 22.5rem);
+  --width-25: clamp(18.75rem, 25vw, 25rem);
+  --width-26: clamp(19.5rem, 26vw, 26rem);
+  --width-30: clamp(22.5rem, 30vw, 30rem);
+  --width-35: clamp(26.25rem, 35vw, 35rem);
+  --width-40: clamp(30rem, 40vw, 40rem);
+  --width-45: clamp(33.75rem, 45vw, 45rem);
+  --width-50: clamp(37.5rem, 50vw, 50rem);
+  --width-55: clamp(41.25rem, 55vw, 55rem);
+  --width-60: clamp(45rem, 60vw, 60rem);
+  --width-65: clamp(48.75rem, 65vw, 65rem);
+  --width-70: clamp(52.5rem, 70vw, 70rem);
+  --width-75: clamp(56.25rem, 75vw, 75rem);
+  --width-80: clamp(60rem, 80vw, 80rem);
+  --width-85: clamp(63.75rem, 85vw, 85rem);
+  --width-90: clamp(67.5rem, 90vw, 90rem);
+  --width-95: clamp(71.25rem, 95vw, 95rem);
+  --width-100: clamp(75rem, 100vw, 100rem);
+
+  --height-4: 1rem;
+  --height-5: 1.25rem;
+  --height-6: 1.5rem;
+  --height-7: 1.75rem;
+  --height-8: 2rem;
+  --height-9: 2.25rem;
+  --height-10: 2.5rem;
+  --height-11: 2.75rem;
+  --height-12: 3rem;
+  --height-30: 7.5rem;
+  --height-90: 22.5rem;
+  --height-100: 25rem;
+  --height-110: 27.5rem;
+  --height-120: 30rem;
+  --height-130: 32.5rem;
+  --height-140: 35rem;
+  --height-150: 37.5rem;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --vw: 3vw;
+
+    --text-2xs: 2.5vw;
+    --text-xs: 2.75vw;
+    --text-sm: 3vw;
+    --text-base: 3.5vw;
+    --text-lg: 4vw;
+    --text-xl: 5vw;
+    --text-2xl: 6vw;
+    --text-3xl: 7vw;
+    --text-4xl: 8vw;
+    --text-5xl: 10vw;
+    --text-6xl: 12vw;
+    --text-7xl: 14vw;
+    --text-8xl: 16vw;
+    --text-9xl: 20vw;
+
+    --width-5: 5vw;
+    --width-10: 10vw;
+    --width-15: 15vw;
+    --width-20: 20vw;
+    --width-22_5: 25vw;
+    --width-25: 25vw;
+    --width-30: 30vw;
+    --width-35: 35vw;
+    --width-40: 40vw;
+    --width-45: 45vw;
+    --width-50: 50vw;
+    --width-55: 55vw;
+    --width-60: 60vw;
+    --width-65: 65vw;
+    --width-70: 70vw;
+    --width-75: 75vw;
+    --width-80: 80vw;
+    --width-85: 85vw;
+    --width-90: 90vw;
+    --width-95: 95vw;
+    --width-100: 100vw;
+
+    --height-4: 3.5vw;
+    --height-5: 4.5vw;
+    --height-6: 5.5vw;
+    --height-7: 6.5vw;
+    --height-8: 7.5vw;
+    --height-9: 8.5vw;
+    --height-10: 9vw;
+    --height-11: 10vw;
+    --height-12: 11vw;
+    --height-30: 25vw;
+    --height-90: 81vw;
+    --height-100: 90vw;
+    --height-110: 99vw;
+    --height-120: 108vw;
+    --height-130: 117vw;
+    --height-140: 126vw;
+    --height-150: 135vw;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-transparent-grey: var(--color-transparent-grey);
+  --color-off-white: var(--color-off-white);
+  --color-blue: var(--color-blue);
+  --color-grey: var(--color-grey);
+
+  /* Fun Color Template 1 */
+  --color-fun-template-1-primary: var(--color-fun-template-1-primary);
+  --color-fun-template-1-secondary: var(--color-fun-template-1-secondary);
+  --color-fun-template-1-tertiary: var(--color-fun-template-1-tertiary);
+  --color-fun-template-1-accent: var(--color-fun-template-1-accent);
+  --color-fun-template-1-button: var(--color-fun-template-1-button);
+  --color-fun-template-1-button-hover: var(--color-fun-template-1-button-hover);
+  --color-fun-template-1-button-hover-text: var(--color-fun-template-1-button-hover-text);
+
+  /* Fun Color Template 2 */
+  --color-fun-template-2-primary: var(--color-fun-template-2-primary);
+  --color-fun-template-2-secondary: var(--color-fun-template-2-secondary);
+  --color-fun-template-2-tertiary: var(--color-fun-template-2-tertiary);
+  --color-fun-template-2-accent: var(--color-fun-template-2-accent);
+  --color-fun-template-2-button: var(--color-fun-template-2-button);
+  --color-fun-template-2-button-hover: var(--color-fun-template-2-button-hover);
+  --color-fun-template-2-button-hover-text: var(--color-fun-template-2-button-hover-text);
+
+  /* Futuristic Color Templates */
+  --color-futuristic-template-1-primary: var(--color-futuristic-template-1-primary);
+  --color-futuristic-template-1-gradient-linear: var(--color-futuristic-template-1-gradient-linear);
+  --color-futuristic-template-1-card-accent: var(--color-futuristic-template-1-card-accent);
+  --color-futuristic-template-1-spotlight: var(--color-futuristic-template-1-spotlight);
+  --color-futuristic-template-2-primary: var(--color-futuristic-template-2-primary);
+  --color-futuristic-template-2-gradient-linear: var(--color-futuristic-template-2-gradient-linear);
+  --color-futuristic-template-2-card-accent: var(--color-futuristic-template-2-card-accent);
+  --color-futuristic-template-2-spotlight: var(--color-futuristic-template-2-spotlight);
+
+  /* Futuristic Base Colors */
+  --color-futuristic-secondary: var(--color-futuristic-secondary);
+
+  /* text */
+  --text-2xs: var(--text-2xs);
+  --text-xs: var(--text-xs);
+  --text-sm: var(--text-sm);
+  --text-base: var(--text-base);
+  --text-lg: var(--text-lg);
+  --text-xl: var(--text-xl);
+  --text-2xl: var(--text-2xl);
+  --text-3xl: var(--text-3xl);
+  --text-4xl: var(--text-4xl);
+  --text-5xl: var(--text-5xl);
+  --text-6xl: var(--text-6xl);
+  --text-7xl: var(--text-7xl);
+  --text-8xl: var(--text-8xl);
+  --text-9xl: var(--text-9xl);
+
+  /* height */
+  --height-4: var(--height-4);
+  --height-5: var(--height-5);
+  --height-6: var(--height-6);
+  --height-7: var(--height-7);
+  --height-8: var(--height-8);
+  --height-9: var(--height-9);
+  --height-11: var(--height-11);
+  --height-12: var(--height-12);
+
+  --height-10: var(--height-10);
+  --height-30: var(--height-30);
+  --height-90: var(--height-90);
+  --height-100: var(--height-100);
+  --height-110: var(--height-110);
+  --height-120: var(--height-120);
+  --height-130: var(--height-130);
+  --height-140: var(--height-140);
+  --height-150: var(--height-150);
+
+  --height-page-padding: calc(2.25rem+var(--vw-1_5)+var(--vw-1_5));
+
+  /* width */
+  --width-5: var(--width-5);
+  --width-10: var(--width-10);
+  --width-15: var(--width-15);
+  --width-17: var(--width-17);
+  --width-20: var(--width-20);
+  --width-21: var(--width-21);
+  --width-22_5: var(--width-22_5);
+  --width-25: var(--width-25);
+  --width-26: var(--width-26);
+  --width-30: var(--width-30);
+  --width-35: var(--width-35);
+  --width-40: var(--width-40);
+  --width-45: var(--width-45);
+  --width-50: var(--width-50);
+  --width-55: var(--width-55);
+  --width-60: var(--width-60);
+  --width-65: var(--width-65);
+  --width-70: var(--width-70);
+  --width-75: var(--width-75);
+  --width-80: var(--width-80);
+  --width-85: var(--width-85);
+  --width-90: var(--width-90);
+  --width-95: var(--width-95);
+  --width-100: var(--width-100);
+
+  /* gap */
+  --spacing-1: var(--vw-0_25);
+  --spacing-2: var(--vw-0_5);
+  --spacing-3: var(--vw-0_75);
+  --spacing-4: var(--vw-1);
+  --spacing-5: var(--vw-1_25);
+  --spacing-6: var(--vw-1_5);
+  --spacing-7: var(--vw-1_75);
+  --spacing-8: var(--vw-2);
+
+  --spacing-x-1: var(--vw-0_25);
+  --spacing-x-2: var(--vw-0_5);
+  --spacing-x-3: var(--vw-0_75);
+  --spacing-x-4: var(--vw-1);
+  --spacing-x-5: var(--vw-1_25);
+  --spacing-x-6: var(--vw-1_5);
+
+  /* border radius */
+  --radius-none: 0;
+  --radius-sm: var(--vw-0_5);
+  --radius: var(--vw-0_75);
+  --radius-md: var(--vw-1);
+  --radius-lg: var(--vw-1_25);
+  --radius-xl: var(--vw-1_75);
+  --radius-full: 9999px;
+
+  /* padding */
+  --padding-1: var(--vw-0_25);
+  --padding-2: var(--vw-0_5);
+  --padding-2.5: var(--vw-0_625);
+  --padding-3: var(--vw-0_75);
+  --padding-4: var(--vw-1);
+  --padding-5: var(--vw-1_25);
+  --padding-6: var(--vw-1_5);
+  --padding-7: var(--vw-1_75);
+  --padding-8: var(--vw-2);
+
+  --padding-x-1: var(--vw-0_25);
+  --padding-x-2: var(--vw-0_5);
+  --padding-x-3: var(--vw-0_75);
+  --padding-x-4: var(--vw-1);
+  --padding-x-5: var(--vw-1_25);
+  --padding-x-6: var(--vw-1_5);
+  --padding-x-7: var(--vw-1_75);
+  --padding-x-8: var(--vw-2);
+
+  --padding-page-padding: calc(2.25rem+var(--vw-1_5)+var(--vw-1_5));
+
+  /* margin */
+  --margin-1: var(--vw-0_25);
+  --margin-2: var(--vw-0_5);
+  --margin-3: var(--vw-0_75);
+  --margin-4: var(--vw-1);
+  --margin-5: var(--vw-1_25);
+  --margin-6: var(--vw-1_5);
+  --margin-7: var(--vw-1_75);
+  --margin-8: var(--vw-2);
+
+  --margin-x-1: var(--vw-0_25);
+  --margin-x-2: var(--vw-0_5);
+  --margin-x-3: var(--vw-0_75);
+  --margin-x-4: var(--vw-1);
+  --margin-x-5: var(--vw-1_25);
+  --margin-x-6: var(--vw-1_5);
+  --margin-x-7: var(--vw-1_75);
+  --margin-x-8: var(--vw-2);
+}
+
+@layer components {}
+
+@layer utilities {
+  /* UI */
+
+  .card {
+    box-shadow: inset 0 0 16.3px rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.45);
+  }
+
+  .card::before {
+    content: "";
+    @apply absolute pointer-events-none inset-0 rounded p-[1px] opacity-35;
+    background: linear-gradient(140deg, #b4b4b4 0%, #ffffff 14%, #cccccc 100%);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  .white-button {
+    @apply text-black;
+    background: linear-gradient(180deg, #edf0fd 0%, #efeff2 74%);
+    box-shadow: 0 10px 18px -7px rgba(0, 0, 0, 0.15);
+  }
+
+  .white-button-shadow {
+    box-shadow: 0 10px 18px -7px rgba(0, 0, 0, 0.3);
+  }
+
+  .white-button::before {
+    content: "";
+    @apply absolute pointer-events-none inset-0 rounded-full p-[2px];
+    background: linear-gradient(0deg,
+        #e9edff 0%,
+        #b5bbdf 27%,
+        #e0e6f5 62%,
+        #ffffff 100%);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  .white-button-rounded::before {
+    @apply rounded;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {}
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 1) rgba(255, 255, 255, 0);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter Tight", sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+.stroked-text {
+  text-shadow: 2px 2px 0 #000;
+  -webkit-text-stroke: 1px #000;
+}

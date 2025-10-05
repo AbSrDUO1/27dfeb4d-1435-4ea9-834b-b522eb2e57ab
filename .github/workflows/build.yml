@@ -1,0 +1,52 @@
+name: Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to build'
+        required: true
+        default: 'main'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          set -euo pipefail
+          npm ci 2>&1 | tee install.log
+
+      - name: Build (next build)
+        run: |
+          set -euo pipefail
+          npm run build 2>&1 | tee build.log
+
+      # Sanity check that Next produced the expected .next artifacts
+      - name: Verify .next exists
+        run: test -d .next || (echo "No .next folder. Check build logs above."; exit 1)
+
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: |
+            install.log
+            build.log
+          if-no-files-found: ignore

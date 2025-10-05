@@ -1,0 +1,3241 @@
+{
+  "componentRegistry": [
+    {
+      "import": "import CarouselBase from '@/components/carousels/CarouselBase';",
+      "name": "CarouselBase",
+      "path": "@/components/carousels/CarouselBase",
+      "description": "Base image carousel with optional bottom title/subtitle and navigation controls.",
+      "details": "Use to rotate a set of images. Text is optional and, when present, appears at the bottom of each card (title on one line, short subtitle under it).",
+      "constraints": {
+        "minCards": 4,
+        "maxCards": 10,
+        "preferredCards": 8,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": false,
+            "minChars": 4,
+            "maxChars": 24,
+            "example": "Sunset Ridge"
+          },
+          "subtitle": {
+            "required": false,
+            "minChars": 12,
+            "maxChars": 80,
+            "example": "Coastal lookout with glass terrace"
+          },
+          "description": {
+            "use": "none"
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/image.jpg"
+        }
+      },
+      "propsSchema": {
+        "children": "React.ReactNode"
+      }
+    },
+    {
+      "import": "import CarouselBaseProgressBar from '@/components/carousels/CarouselBaseProgressBar';",
+      "name": "CarouselBaseProgressBar",
+      "path": "@/components/carousels/CarouselBaseProgressBar",
+      "description": "Carousel with drag/scroll, bottom progress bar, and optional title/subtitle under each image.",
+      "details": "Use to showcase media with a progress indicator. Each slide is image-first; optional bottom text (single-line title + short subtitle) may be shown beneath the image.",
+      "constraints": {
+        "minCards": 4,
+        "maxCards": 10,
+        "preferredCount": 8,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": false,
+            "minChars": 4,
+            "maxChars": 24,
+            "example": "Sunset Ridge"
+          },
+          "subtitle": {
+            "required": false,
+            "minChars": 12,
+            "maxChars": 80,
+            "example": "Coastal lookout with glass terrace"
+          },
+          "description": {
+            "use": "none"
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/image.jpg"
+        }
+      },
+      "propsSchema": {
+        "children": "React.ReactNode"
+      }
+    },
+    {
+      "import": "import CarouselCardStack from '@/components/carousels/CarouselCardStack/CarouselCardStack';",
+      "name": "CarouselCardStack",
+      "path": "@/components/carousels/CarouselCardStack/CarouselCardStack",
+      "description": "Interactive stacked card carousel navigated by clicking and dragging.",
+      "details": "Use when you want a dynamic, layered card stack of images where users can sort through by dragging. Cards animate in and out as users swipe left or right, providing a tactile and visually impactful way to browse media. This component is image-only, with no text overlays.",
+      "constraints": {
+        "minCards": 5,
+        "maxCards": 10,
+        "preferredCount": 7,
+        "cardIncrementStep": 1
+      },
+      "propsSchema": {
+        "children": "React.ReactNode"
+      }
+    },
+    {
+      "import": "import CarouselInfiniteLoop from '@/components/carousels/CarouselInfiniteLoop/CarouselInfiniteLoop';",
+      "name": "CarouselInfiniteLoop",
+      "path": "@/components/carousels/CarouselInfiniteLoop/CarouselInfiniteLoop",
+      "description": "Looping image carousel with drag/scroll navigation and optional bottom text.",
+      "details": "Use for continuously scrolling galleries where slides wrap infinitely. Users navigate by dragging or trackpad/scroll. Each slide must include an image; an optional title and short subtitle can appear at the bottom of the card. The carousel loops endlessly and does not autoplay.",
+      "constraints": {
+        "minCards": 5,
+        "maxCards": 12,
+        "preferredCount": 5,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": false,
+            "minChars": 4,
+            "maxChars": 24,
+            "example": "Sunset Ridge"
+          },
+          "subtitle": {
+            "required": false,
+            "minChars": 12,
+            "maxChars": 80,
+            "example": "Coastal lookout with glass terrace"
+          },
+          "description": {
+            "use": "none"
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/image.jpg"
+        }
+      },
+      "propsSchema": {
+        "children": "React.ReactNode"
+      }
+    },
+    {
+      "import": "import CarouselAutoPlay from '@/components/carousels/CarouselAutoPlay/CarouselAutoPlay';",
+      "name": "CarouselAutoPlay",
+      "path": "@/components/carousels/CarouselAutoPlay/CarouselAutoPlay",
+      "description": "Autoplay carousel with progress indication and optional text under images.",
+      "details": "Use when you want a carousel that automatically advances through images with a progress indicator. Each slide is image-first, with the option to show a short title and subtitle below the image. Navigation can also be done manually via drag/scroll. The carousel always loops infinitely.",
+      "constraints": {
+        "minCards": 2,
+        "maxCards": 7,
+        "preferredCount": 5,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": false,
+            "minChars": 4,
+            "maxChars": 24,
+            "example": "Aurora Lights"
+          },
+          "subtitle": {
+            "required": false,
+            "minChars": 12,
+            "maxChars": 80,
+            "example": "Dancing colors across the northern sky"
+          },
+          "description": {
+            "use": "none"
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/image.jpg"
+        }
+      },
+      "propsSchema": {
+        "children": "React.ReactNode"
+      }
+    },
+    {
+      "import": "import CarouselFullscreen from '@/components/carousels/CarouselFullscreen/CarouselFullscreen';",
+      "name": "CarouselFullscreen",
+      "path": "@/components/carousels/CarouselFullscreen/CarouselFullscreen",
+      "description": "Fullscreen autoplay carousel for immersive visual storytelling.",
+      "details": "Use when you want a fullscreen image-first carousel that fills the viewport and cycles automatically. No text overlays, captions, or subtitles are supported — strictly visual. Navigation is autoplay with infinite looping and optional manual controls.",
+      "constraints": {
+        "minCards": 2,
+        "maxCards": 6,
+        "preferredCount": 4,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "use": "none"
+          },
+          "subtitle": {
+            "use": "none"
+          },
+          "description": {
+            "use": "none"
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/fullscreen-image.jpg"
+        }
+      },
+      "propsSchema": {
+        "children": "React.ReactNode"
+      }
+    },
+    {
+      "import": "import CarouselDragScroll from '@/components/carousels/CarouselDragScroll/CarouselDragScroll';",
+      "name": "CarouselDragScroll",
+      "path": "@/components/carousels/CarouselDragScroll/CarouselDragScroll",
+      "description": "Drag-to-scroll carousel of image cards with an optional title at the bottom.",
+      "details": "Use for interactive, click-and-drag carousels. Each slide must contain an image; an optional single-line title can appear under the image. No subtitles or descriptions.",
+      "constraints": {
+        "minCards": 2,
+        "maxCards": 5,
+        "preferredCount": 3,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": false,
+            "minChars": 4,
+            "maxChars": 28,
+            "example": "3.5M Followers"
+          },
+          "subtitle": {
+            "use": "none"
+          },
+          "description": {
+            "use": "none"
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/image.jpg"
+        }
+      },
+      "propsSchema": {
+        "children": "React.ReactNode"
+      }
+    },
+    {
+      "import": "import CarouselAutoScroll from '@/components/carousels/CarouselAutoScroll/CarouselAutoScroll';",
+      "name": "CarouselAutoScroll",
+      "path": "@/components/carousels/CarouselAutoScroll/CarouselAutoScroll",
+      "description": "Fully automated infinite-scrolling carousel with optional bottom text.",
+      "details": "Use when you want a continuously auto-scrolling, looping carousel that runs without user interaction. Each slide must contain an image, with the option to include a short title and subtitle at the bottom. Best for showcasing logos, partners, or highlights in motion.",
+      "constraints": {
+        "minCards": 5,
+        "maxCards": 10,
+        "preferredCount": 8,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": false,
+            "minChars": 4,
+            "maxChars": 24,
+            "example": "Trusted Partner"
+          },
+          "subtitle": {
+            "required": false,
+            "minChars": 12,
+            "maxChars": 80,
+            "example": "Serving global clients across industries"
+          },
+          "description": {
+            "use": "none"
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/image.jpg"
+        }
+      },
+      "propsSchema": {
+        "children": "React.ReactNode"
+      }
+    },
+    {
+      "import": "import ButtonIconRotate from '@/components/buttons/ButtonIconRotate/ButtonIconRotate';",
+      "name": "ButtonIconRotate",
+      "path": "@/components/buttons/ButtonIconRotate/ButtonIconRotate",
+      "description": "CTA button with a trailing icon that rotates on hover/focus and swaps colors.",
+      "details": "Use for primary CTAs where a subtle motion cue helps affordance. Icon rotates and the button background/text colors transition on hover/focus-visible. Keep label short; no multiline.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 28,
+            "example": "Button with Icon"
+          }
+        },
+        "interactionRules": {
+          "iconRotatesOnHover": true,
+          "colorTransitionOnHover": true
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "textClassName": "string",
+        "iconClassName": "string"
+      }
+    },
+    {
+      "import": "import ButtonTextStagger from '@/components/buttons/ButtonTextStagger/ButtonTextStagger';",
+      "name": "ButtonTextStagger",
+      "path": "@/components/buttons/ButtonTextStagger/ButtonTextStagger",
+      "description": "Text-only button that staggers each character on hover.",
+      "details": "Use when you want a subtle motion cue without changing colors or background. On hover, the label’s characters animate in sequence (stagger). No visual restyle beyond the text motion.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 28,
+            "example": "Stagger Animation"
+          }
+        },
+        "interactionRules": {
+          "textStaggerOnHover": true
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "bgClassName": "string"
+      }
+    },
+    {
+      "import": "import ButtonShiftHover from '@/components/buttons/ButtonShiftHover/ButtonShiftHover';",
+      "name": "ButtonShiftHover",
+      "path": "@/components/buttons/ButtonShiftHover/ButtonShiftHover",
+      "description": "CTA button where the label nudges upward on hover and a trailing dot fills from outline to solid.",
+      "details": "Use for primary or secondary CTAs that benefit from a gentle motion cue. Keep the label short and single‑line. The trailing dot is purely decorative and fills on hover.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 28,
+            "example": "Get Started"
+          }
+        },
+        "interactionRules": {
+          "shiftOnHover": true,
+          "dotFillOnHover": true
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "bgClassName": "string",
+        "textClassName": "string"
+      }
+    },
+    {
+      "import": "import ButtonHoverDirectional from '@/components/buttons/ButtonHoverDirectional/ButtonHoverDirectional';",
+      "name": "ButtonHoverDirectional",
+      "path": "@/components/buttons/ButtonHoverDirectional/ButtonHoverDirectional",
+      "description": "CTA button whose background color fills from the cursor entry point on hover.",
+      "details": "Use for attention-grabbing CTAs. The hover color animates from where the pointer enters the button, giving a directional reveal. Single‑line label; icons are optional but not required.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 28,
+            "example": "Directional Hover"
+          }
+        },
+        "interactionRules": {
+          "effect": "directional-fill",
+          "fromPointer": true
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "textClassName": "string",
+        "bgClassName": "string",
+        "circleClassName": "string"
+      }
+    },
+    {
+      "import": "import ButtonHoverBubble from '@/components/buttons/ButtonHoverBubble';",
+      "name": "ButtonHoverBubble",
+      "path": "@/components/buttons/ButtonHoverBubble",
+      "description": "CTA button with a bubble-like hover animation that swaps the label and icon positions.",
+      "details": "Use for playful CTAs where the icon moves inside a bubble and label/icon positions swap on hover. Default state shows the label in the main area and the icon in a circle. On hover, they switch places with a smooth animated transition.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 28,
+            "example": "Contact Us"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "contentClassName": "string",
+        "arrowClassName": "string",
+        "disabled": "boolean",
+        "ariaLabel": "string",
+        "type": "'button'|'submit'|'reset'"
+      }
+    },
+    {
+      "import": "import ButtonTextUnderline from '@/components/buttons/ButtonTextUnderline';",
+      "name": "ButtonTextUnderline",
+      "path": "@/components/buttons/ButtonTextUnderline",
+      "description": "Text-only button where an underline animates in on hover.",
+      "details": "Use for inline or minimal CTAs or links where you want the hover state to reveal affordance without altering color or layout. The underline appears smoothly under the label when hovered.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 28,
+            "example": "Hover Me"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "ariaLabel": "string",
+        "disabled": "boolean",
+        "type": "'button'|'submit'|'reset'"
+      }
+    },
+    {
+      "import": "import ButtonIconArrow from '@/components/buttons/ButtonIconArrow';",
+      "name": "ButtonIconArrow",
+      "path": "@/components/buttons/ButtonIconArrow",
+      "description": "Button with a trailing arrow icon that transforms on hover.",
+      "details": "Use for CTAs where a subtle icon transformation helps indicate forward navigation. The arrow icon transitions into a square on hover/focus. Keep label short and simple.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 28,
+            "example": "Arrow Button"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "textClassName": "string",
+        "iconClassName": "string"
+      }
+    },
+    {
+      "import": "import ButtonExpandHover from '@/components/buttons/ButtonExpandHover';",
+      "name": "ButtonExpandHover",
+      "path": "@/components/buttons/ButtonExpandHover",
+      "description": "CTA button with a circular icon container that expands to fill the button on hover.",
+      "details": "Use for high-impact CTAs where a strong hover animation is desired. The circular icon background expands to fill the button while text and icon invert colors. Keep label short; no multiline.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 28,
+            "example": "Expanding Button"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "textClassName": "string",
+        "iconClassName": "string"
+      }
+    },
+    {
+      "import": "import ButtonHoverMagnetic from '@/components/buttons/ButtonHoverMagnetic/ButtonHoverMagnetic';",
+      "name": "ButtonHoverMagnetic",
+      "path": "@/components/buttons/ButtonHoverMagnetic/ButtonHoverMagnetic",
+      "description": "CTA button that subtly follows the cursor with a magnetic hover effect.",
+      "details": "Use when you want a playful, high-affordance interaction. On hover, the button shifts toward the cursor and recenters on leave. Keep labels short; no multiline.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 28,
+            "example": "Magnetic Button"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "strengthFactor": "number"
+      }
+    },
+    {
+      "import": "import ButtonSlideBackground from '@/components/buttons/ButtonSlideBackground';",
+      "name": "ButtonSlideBackground",
+      "path": "@/components/buttons/ButtonSlideBackground",
+      "description": "Button whose background color slides in from an edge on hover.",
+      "details": "Use for prominent CTAs where a directional fill adds emphasis. By default the background slides up from the bottom. Keep the label short; no multiline.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 24,
+            "example": "Reserve"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "contentClassName": "string",
+        "bgColor": "string",
+        "hoverBgColor": "string",
+        "textColor": "string",
+        "hoverTextColor": "string"
+      }
+    },
+    {
+      "import": "import ButtonBorderAnimated from '@/components/buttons/ButtonBorderAnimated/ButtonBorderAnimated';",
+      "name": "ButtonBorderAnimated",
+      "path": "@/components/buttons/ButtonBorderAnimated/ButtonBorderAnimated",
+      "description": "Button with a continuously moving/animated border (no hover trigger).",
+      "details": "Use for attention-grabbing CTAs where a subtle, constant border motion is desired. The interior background and label remain steady while the outer stroke animates around the edges in a loop.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 24,
+            "example": "Moving Border"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "containerClassName": "string",
+        "borderRadius": "string",
+        "borderClassName": "string",
+        "duration": "number"
+      }
+    },
+    {
+      "import": "import ButtonSelectorState from '@/components/buttons/ButtonSelectorState';",
+      "name": "ButtonSelectorState",
+      "path": "@/components/buttons/ButtonSelectorState",
+      "description": "Segmented control button group where one option is active at a time.",
+      "details": "Use for toggling between 2–5 options like views, filters, or modes. Each option behaves as a button; the selected one is highlighted with a filled style, while inactive options remain outlined or background-neutral.",
+      "constraints": {
+        "minOptions": 2,
+        "maxOptions": 5,
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 18,
+            "example": "Option 1"
+          }
+        }
+      },
+      "propsSchema": {
+        "options": "Array<{ label: string; value: string }>",
+        "activeValue": "string",
+        "onValueChange": "(value: string) => void",
+        "className": "string",
+        "buttonClassName": "string",
+        "hoverClassName": "string"
+      }
+    },
+    {
+      "import": "import ButtonPressDepth from '@/components/buttons/ButtonPressDepth';",
+      "name": "ButtonPressDepth",
+      "path": "@/components/buttons/ButtonPressDepth",
+      "description": "Button with depth effect where shadow compresses when pressed.",
+      "details": "Use for buttons that should feel tactile and physical. The button appears raised with a drop shadow in its default state, and when pressed, the shadow shortens to simulate being pushed in.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "minChars": 2,
+            "maxChars": 24,
+            "example": "Push me"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "onClick": "function",
+        "className": "string",
+        "frontClassName": "string",
+        "ariaLabel": "string",
+        "disabled": "boolean",
+        "type": "'button'|'submit'|'reset'",
+        "children": "React.ReactNode",
+        "variant": "'bottom' | 'side' | 'none'"
+      }
+    },
+    {
+      "import": "import TextFillGradient from '@/components/text/TextFillGradient';",
+      "name": "TextFillGradient",
+      "path": "@/components/text/TextFillGradient",
+      "description": "Text component with a gradient fill effect applied to the characters.",
+      "details": "Use for headings, hero text, or emphasis areas where styled gradient text is needed.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "Beautiful Gradient Text"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "className": "string",
+        "ariaLabel": "string",
+        "color1": "string",
+        "color2": "string",
+        "color3": "string"
+      }
+    },
+    {
+      "import": "import TextFillGradientHover from '@/components/text/TextFillGradientHover/TextFillGradientHover';",
+      "name": "TextFillGradientHover",
+      "path": "@/components/text/TextFillGradientHover/TextFillGradientHover",
+      "description": "Text component with a gradient fill effect triggered on hover.",
+      "details": "Use when you want large or impactful text that animates from outlined stroke to a full gradient fill on hover. Best for hero sections, banners, or high-visibility words.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "WEBILD"
+          }
+        }
+      },
+      "propsSchema": {
+        "label": "string",
+        "gradientColors": "string[]",
+        "gradientDirection": "'to right' | 'to left' | 'to top' | 'to bottom' | string",
+        "strokeColor": "string",
+        "strokeWidth": "number",
+        "className": "string",
+        "textClassName": "string"
+      }
+    },
+    {
+      "import": "import TextScrollBackgroundHighlight from '@/components/text/TextScrollBackgroundHighlight';",
+      "name": "TextScrollBackgroundHighlight",
+      "path": "@/components/text/TextScrollBackgroundHighlight",
+      "description": "Text that reveals or highlights progressively as the user scrolls.",
+      "details": "Use when you want text to animate with scroll position, revealing characters smoothly in sync with scroll movement. Great for storytelling sections, intros, or explanatory copy tied to scroll progress.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "This animation is tied to scroll position. Characters reveal smoothly as you scroll."
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "children": "React.ReactNode",
+        "className": "string",
+        "duration": "number",
+        "stagger": "number",
+        "start": "string",
+        "end": "string",
+        "variant": "'scrub' | 'trigger' | 'words-scrub' | 'words-trigger'",
+        "ariaLabel": "string",
+        "gradientColors": {
+          "from": "string",
+          "to": "string"
+        }
+      }
+    },
+    {
+      "import": "import TextScrollTransformRotate from '@/components/text/TextScrollTransformRotate';",
+      "name": "TextScrollTransformRotate",
+      "path": "@/components/text/TextScrollTransformRotate",
+      "description": "Scroll-scrubbed text effect where characters rotate into view as the user scrolls.",
+      "details": "Use when you want dynamic storytelling text that animates with scroll. Each character rotates and fades progressively in sync with scroll position. Great for intros, hero copy, or sections where motion helps emphasis.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "This animation is tied to scroll position. Characters reveal smoothly as you scroll up and down."
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "children": "React.ReactNode",
+        "className": "string",
+        "duration": "number",
+        "stagger": "number",
+        "start": "string",
+        "end": "string",
+        "variant": "'scrub' | 'trigger' | 'words-scrub' | 'words-trigger'",
+        "ariaLabel": "string",
+        "gradientColors": {
+          "from": "string",
+          "to": "string"
+        }
+      }
+    },
+    {
+      "import": "import TextScrollEntranceSlide from '@/components/text/TextScrollEntranceSlide';",
+      "name": "TextScrollEntranceSlide",
+      "path": "@/components/text/TextScrollEntranceSlide",
+      "description": "Scroll-synced text entrance effect where characters slide upward into view as the user scrolls.",
+      "details": "Use when you want text to feel like it’s entering the viewport in sync with scroll. Each word or character fades and slides upward from below. Best for storytelling sections, hero copy, or progressive reveals tied to reading flow.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "This animation is tied to scroll position. Characters reveal smoothly as you scroll up and down."
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "children": "React.ReactNode",
+        "className": "string",
+        "duration": "number",
+        "stagger": "number",
+        "start": "string",
+        "end": "string",
+        "variant": "'scrub' | 'trigger' | 'words-scrub' | 'words-trigger'",
+        "gradientColors": {
+          "from": "string",
+          "to": "string"
+        }
+      }
+    },
+    {
+      "import": "import TextScrollRevealBlur from '@/components/text/TextScrollRevealBlur';",
+      "name": "TextScrollRevealBlur",
+      "path": "@/components/text/TextScrollRevealBlur",
+      "description": "Scroll‑synced reveal where text sharpens from a blurred state as you scroll.",
+      "details": "Use for narrative sections where copy should emerge smoothly with the reader’s progress. The effect scrubs with scroll: characters start blurred and gradually come into focus (optionally fading in).",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "This animation is tied to scroll position. Characters reveal smoothly as you scroll up and down."
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "children": "React.ReactNode",
+        "className": "string",
+        "duration": "number",
+        "stagger": "number",
+        "start": "string",
+        "end": "string",
+        "variant": "'scrub' | 'trigger' | 'words-scrub' | 'words-trigger'",
+        "gradientColors": {
+          "from": "string",
+          "to": "string"
+        }
+      }
+    },
+    {
+      "import": "import TextScrollTransformScale from '@/components/text/TextScrollTransformScale';",
+      "name": "TextScrollTransformScale",
+      "path": "@/components/text/TextScrollTransformScale",
+      "description": "Scroll-synced animation where text scales smoothly into place.",
+      "details": "Use for impactful copy reveals tied to scroll. Characters or entire words scale from smaller/larger sizes into their natural size as the user scrolls. The animation scrubs with scroll for smooth, controlled motion.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "This animation is tied to scroll position. Characters reveal smoothly as you scroll up and down."
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "children": "React.ReactNode",
+        "className": "string",
+        "duration": "number",
+        "stagger": "number",
+        "start": "string",
+        "end": "string",
+        "variant": "'scrub' | 'trigger' | 'words-scrub' | 'words-trigger'",
+        "ariaLabel": "string",
+        "gradientColors": {
+          "from": "string",
+          "to": "string"
+        }
+      }
+    },
+    {
+      "import": "import TextScrollExpand from '@/components/text/TextScrollExpand';",
+      "name": "TextScrollExpand",
+      "path": "@/components/text/TextScrollExpand",
+      "description": "Scroll-synced animation where text expands vertically into view.",
+      "details": "Use for dramatic scroll reveals where characters or words stretch open as the user scrolls. The animation is scrubbed to scroll position, ensuring smooth and synchronized expansion with user movement.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "This animation is tied to scroll position. Characters reveal smoothly as you scroll up and down."
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "children": "React.ReactNode",
+        "className": "string",
+        "duration": "number",
+        "stagger": "number",
+        "start": "string",
+        "end": "string",
+        "variant": "'scrub' | 'trigger' | 'words-scrub' | 'words-trigger'",
+        "gradientColors": {
+          "from": "string",
+          "to": "string"
+        }
+      }
+    },
+    {
+      "import": "import TextScrollFlipThreeD from '@/components/text/TextScrollFlipThreeD';",
+      "name": "TextScrollFlipThreeD",
+      "path": "@/components/text/TextScrollFlipThreeD",
+      "description": "Scroll-synced animation where text flips in 3D perspective as it appears.",
+      "details": "Use for dynamic scroll-based reveals where characters rotate in 3D space (X or Y axis) as the user scrolls. The animation scrubs to the scroll position, providing a smooth and immersive flipping effect.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "This animation is tied to scroll position. Characters reveal smoothly as you scroll up and down."
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "children": "React.ReactNode",
+        "className": "string",
+        "duration": "number",
+        "stagger": "number",
+        "start": "string",
+        "end": "string",
+        "variant": "'scrub' | 'trigger' | 'words-scrub' | 'words-trigger'",
+        "ariaLabel": "string",
+        "gradientColors": {
+          "from": "string",
+          "to": "string"
+        }
+      }
+    },
+    {
+      "import": "import TextMaskReveal from '@/components/text/TextMaskReveal';",
+      "name": "TextMaskReveal",
+      "path": "@/components/text/TextMaskReveal",
+      "description": "Large headline where an image or video is revealed *inside* the text via a mask.",
+      "details": "Use for bold, branding-heavy moments. The text itself acts as a mask (clip-path) that shows a moving/looping background (image or video). Supports autoplay/looping videos and static or parallaxed images. Styling-only—this is not an input.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "Animated Background"
+          }
+        },
+        "mediaRules": {
+          "sourceRequired": true,
+          "allowedTypes": ["image", "video"]
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "className": "string",
+        "direction": "'left' | 'right'",
+        "ariaLabel": "string"
+      }
+    },
+    {
+      "import": "import TextNumberCount from '@/components/text/TextNumberCount';",
+      "name": "TextNumberCount",
+      "path": "@/components/text/TextNumberCount",
+      "description": "Animated number counter that increments smoothly from a start to an end value.",
+      "details": "Use for statistics, or metrics where a counting animation adds emphasis. Numbers animate on mount or when scrolled into view. Supports decimals, currency, and optional suffix/prefix.",
+      "constraints": {
+        "numberRules": {
+          "startValue": {
+            "required": true,
+            "example": 0
+          },
+          "endValue": {
+            "required": true,
+            "example": 99.99
+          },
+          "decimals": {
+            "required": false,
+            "example": 2
+          }
+        }
+      },
+      "propsSchema": {
+        "value": "number",
+        "locales": "Intl.LocalesArgument",
+        "className": "string",
+        "prefix": "string",
+        "suffix": "string",
+        "format": "Omit <Intl.NumberFormatOptions, 'notation'> & { notation?: Exclude<Intl.NumberFormatOptions['notation'], 'scientific' | 'engineering'> }"
+      }
+    },
+    {
+      "import": "import TextWordRotateCube from '@/components/text/TextWordRotateCube/TextWordRotateCube';",
+      "name": "TextWordRotateCube",
+      "path": "@/components/text/TextWordRotateCube/TextWordRotateCube",
+      "description": "Animated text where words rotate in a 3D cube-like fashion.",
+      "details": "Use for taglines or hero sections where rotating through words adds emphasis. Each word rotates in a cube animation, one after another, while maintaining central alignment. Works best with short single words.",
+      "constraints": {
+        "textRules": {
+          "words": {
+            "required": true,
+            "example": ["Brands.", "Ideas.", "Designs."]
+          }
+        }
+      },
+      "propsSchema": {
+        "items": "string[]",
+        "autoPlay": "boolean",
+        "duration": "number",
+        "ariaLabel": "string"
+      }
+    },
+    {
+      "import": "import TextScrollCharacterWave from '@/components/text/TextScrollCharacterWave';",
+      "name": "TextScrollCharacterWave",
+      "path": "@/components/text/TextScrollCharacterWave",
+      "description": "Scroll-synced text animation where characters move in a wave-like motion.",
+      "details": "Use for creating fluid motion effects on long text passages. Each character animates in a sinusoidal wave pattern tied to scroll position, giving a dynamic flowing effect across the line.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "Experience the wave of innovation"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "className": "string",
+        "primaryColor": "string",
+        "secondaryColor": "string",
+        "start": "string",
+        "stagger": "number",
+        "duration": "number",
+        "ease": "string",
+        "ariaLabel": "string"
+      }
+    },
+    {
+      "import": "import TextRevealColor from '@/components/text/TextRevealColor';",
+      "name": "TextRevealColor",
+      "path": "@/components/text/TextRevealColor",
+      "description": "Text animation where characters reveal by transitioning from one color to another.",
+      "details": "Use for headings or statements where the text gradually shifts from a base color to a highlight color as it appears on screen. Works well for bold intros or section headers.",
+      "constraints": {
+        "textRules": {
+          "label": {
+            "required": true,
+            "example": "Welcome to the future"
+          }
+        }
+      },
+      "propsSchema": {
+        "text": "string",
+        "className": "string",
+        "startColor": "string",
+        "colorPercentage": "number",
+        "charDelay": "number",
+        "charDuration": "number",
+        "instant": "boolean",
+        "scrollTrigger": "boolean",
+        "start": "string",
+        "ariaLabel": "string"
+      }
+    },
+    {
+      "import": "import TimelineBase from '@/components/timeline/TimelineBase';",
+      "name": "TimelineBase",
+      "path": "@/components/timeline/TimelineBase",
+      "description": "Vertical timeline where each step contains an image, title, and subtitle.",
+      "details": "Use for project or process timelines. Each card displays an image on one side and a title with a short subtitle beneath it. Layout can alternate sides to create a flowing sequence.",
+      "constraints": {
+        "minCards": 3,
+        "preferredCount": 5,
+        "maxCards": 7,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 40,
+            "example": "Phase 1"
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 10,
+            "maxChars": 120,
+            "example": "Initial research and planning phase for the project"
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/phase-1.jpg"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ title: string; description: string; video?: string; image?: string }>",
+        "title": "string",
+        "titleConfig": "BaseTextConfig",
+        "className": "string",
+        "sectionClassName": "string",
+        "backgroundColor": "string",
+        "backgroundPattern": "string",
+        "gradient": "GradientConfig",
+        "gapClassName": "string",
+        "paddingClassName": "string",
+        "cardClassName": "string",
+        "imageContainerClassName": "string",
+        "mediaClassName": "string",
+        "titleClassName": "string",
+        "descriptionClassName": "string",
+        "sectionTitleClassName": "string"
+      }
+    },
+    {
+      "import": "import TimelineCardPopupDetail from '@/components/timeline/TimelineCardPopupDetail/TimelineCardPopupDetail';",
+      "name": "TimelineCardPopupDetail",
+      "path": "@/components/timeline/TimelineCardPopupDetail/TimelineCardPopupDetail",
+      "description": "TimelineBase component where cards reveal a detail popup overlay on hover.",
+      "details": "Each card contains an image, title, and subtitle. On hover, the card expands or overlays to reveal more detail. Useful for timelines where deeper context is shown interactively.",
+      "constraints": {
+        "minCards": 3,
+        "maxCards": 7,
+        "preferredCount": 5,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 24,
+            "example": "Phase 1"
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 12,
+            "maxChars": 80,
+            "example": "Initial research and planning phase for the project development"
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/image.jpg"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ title: string; description: string; video?: string; image?: string }>",
+        "title": "string",
+        "className": "string"
+      }
+    },
+    {
+      "import": "import TimelineHorizontal from '@/components/timeline/TimelineHorizontal/TimelineHorizontal';",
+      "name": "TimelineHorizontal",
+      "path": "@/components/timeline/TimelineHorizontal/TimelineHorizontal",
+      "description": "Horizontal timeline layout with image, title, and description for each step.",
+      "details": "Displays project or process phases in a side-by-side horizontal timeline. Each card requires an image, a title, and a description. Ideal for showing sequential steps in a clear horizontal flow.",
+      "constraints": {
+        "minCards": 3,
+        "maxCards": 3,
+        "preferredCount": 3,
+        "cardIncrementStep": 0,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 32,
+            "example": "Research & Discovery Phase"
+          },
+          "description": {
+            "required": true,
+            "minChars": 24,
+            "maxChars": 160,
+            "example": "Initial research and planning phase for the project development including market analysis, user interviews, competitive research, and technical feasibility studies to ensure project success."
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/image.jpg"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ title: string; description: string; video?: string; image?: string; mobileImage?: string }>",
+        "className": "string"
+      }
+    },
+    {
+      "import": "import TimelineCardStack from '@/components/timeline/TimelineCardStack';",
+      "name": "TimelineCardStack",
+      "path": "@/components/timeline/TimelineCardStack",
+      "description": "Stacked timeline layout where each card displays an image, title, and subtitle, alternating between left and right alignment.",
+      "details": "Use for storytelling or project phases where cards should appear stacked in a vertical sequence. Each card requires an image, title, and subtitle. Layout alternates image and text positioning for visual rhythm.",
+      "constraints": {
+        "minCards": 2,
+        "maxCards": 5,
+        "preferredCount": 3,
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/image.jpg"
+        },
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 40,
+            "example": "Design & Prototyping"
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 20,
+            "maxChars": 140,
+            "example": "Creating wireframes, mockups, and prototypes with feedback integration."
+          }
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ id: number; title: string; description: string; image: string }>",
+        "className": "string",
+        "sectionClassName": "string",
+        "backgroundColor": "string",
+        "backgroundPattern": "string",
+        "gradient": "GradientConfig",
+        "gapClassName": "string",
+        "cardClassName": "string",
+        "cardHeight": "string",
+        "cardStickyPosition": "string",
+        "stepNumberClassName": "string",
+        "stepNumberSize": "string",
+        "titleClassName": "string",
+        "descriptionClassName": "string",
+        "contentGapClassName": "string",
+        "imageContainerClassName": "string",
+        "imageClassName": "string"
+      }
+    },
+    {
+      "import": "import Timeline3DCardStack from '@/components/timeline/Timeline3DCardStack';",
+      "name": "Timeline3DCardStack",
+      "path": "@/components/timeline/Timeline3DCardStack",
+      "description": "Stacked timeline where each step appears on a raised 3D card with subtle tilt/parallax.",
+      "details": "Use for narrative timelines or project phases that benefit from depth and motion. Each card requires an image, a short title, and a supporting subtitle. Cards alternate left/right for rhythm and use a gentle 3D tilt on hover/scroll.",
+      "constraints": {
+        "minCards": 2,
+        "maxCards": 5,
+        "preferredCount": 3,
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/image.jpg"
+        },
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 40,
+            "example": "Design & Prototyping"
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 20,
+            "maxChars": 160,
+            "example": "Creating wireframes, mockups, and interactive prototypes with feedback integration."
+          }
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ id: number; title: string; description: string; image: string }>",
+        "className": "string"
+      }
+    },
+    {
+      "import": "import TimelineProcessFlow from '@/components/timeline/TimelineProcessFlow';",
+      "name": "TimelineProcessFlow",
+      "path": "@/components/timeline/TimelineProcessFlow",
+      "description": "Alternating process timeline. Each step shows an image, a title, a subtitle, and exactly three key points.",
+      "details": "Use for describing phased processes (research, design, build, etc.). Cards alternate left/right around a central line with step markers. Every card requires one image plus text (title, subtitle, and three concise bullet points).",
+      "constraints": {
+        "minCards": 3,
+        "maxCards": 5,
+        "preferredCount": 3,
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/phase-1.jpg"
+        },
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 36,
+            "example": "Research & Discovery Phase"
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 24,
+            "maxChars": 160,
+            "example": "Initial research and planning with user interviews, competitive analysis, and feasibility studies."
+          },
+          "points": {
+            "required": true,
+            "requiredCount": 3,
+            "minCharsPerPoint": 8,
+            "maxCharsPerPoint": 64,
+            "examples": [
+              "Market analysis & user research",
+              "Competitive benchmarking",
+              "Technical feasibility review"
+            ]
+          }
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ id: string; title: string; description: string; image: string; items: Array<{ icon: LucideIcon; text: string }>; reverse: boolean }>",
+        "className": "string",
+        "sectionClassName": "string",
+        "backgroundColor": "string",
+        "backgroundPattern": "string",
+        "gradient": "GradientConfig",
+        "lineClassName": "string",
+        "activeLineClassName": "string",
+        "itemClassName": "string",
+        "cardClassName": "string",
+        "imageClassName": "string",
+        "numberClassName": "string",
+        "titleClassName": "string",
+        "descriptionClassName": "string",
+        "listItemClassName": "string",
+        "iconContainerClassName": "string",
+        "iconClassName": "string",
+        "gapClassName": "string",
+        "paddingClassName": "string"
+      }
+    },
+    {
+      "import": "import TimelineYearly from '@/components/timeline/TimelineYearly';",
+      "name": "TimelineYearly",
+      "path": "@/components/timeline/TimelineYearly",
+      "description": "Year-based timeline with a left-aligned year list and right-aligned details. The active year highlights and its milestones appear to the right.",
+      "details": "Use for roadmaps or company histories organized by year. Each year contains one or more entries (title + short description). No images. The active year can be driven by scroll or clicked in the year list.",
+      "constraints": {
+        "minYears": 3,
+        "maxYears": 6,
+        "preferredCount": 4,
+        "yearIncrementStep": 1,
+        "entriesPerYear": {
+          "min": 3,
+          "max": 6,
+          "preferred": 4
+        },
+        "textRules": {
+          "year": {
+            "required": true,
+            "example": "2022"
+          },
+          "title": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 40,
+            "example": "Phase 2"
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 32,
+            "maxChars": 220,
+            "example": "Design and prototyping with user feedback integration through iterative sprints, wireframing, high‑fidelity mockups, and accessibility reviews."
+          }
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ year: string; title: string; description: string }>",
+        "className": "string",
+        "sectionClassName": "string",
+        "backgroundColor": "string",
+        "backgroundPattern": "string",
+        "gradient": "GradientConfig",
+        "showAurora": "boolean",
+        "lineClassName": "string",
+        "activeLineClassName": "string",
+        "dotClassName": "string",
+        "yearClassName": "string",
+        "titleClassName": "string",
+        "descriptionClassName": "string",
+        "gapClassName": "string",
+        "paddingClassName": "string",
+        "marginClassName": "string"
+      }
+    },
+    {
+      "import": "import TimelinePhoneView from '@/components/timeline/TimelinePhoneView/TimelinePhoneView';",
+      "name": "TimelinePhoneView",
+      "path": "@/components/timeline/TimelinePhoneView/TimelinePhoneView",
+      "description": "Phone-framed timeline where each step shows an image beside large step text. Cards tilt/stagger for a dynamic, mobile-showcase feel.",
+      "details": "Use for storytelling or process sections that pair big imagery with concise copy. Each card REQUIRES an image plus short title and subtitle. Layout staggers left/right with subtle tilt to mimic phone screens.",
+      "constraints": {
+        "minCards": 2,
+        "maxCards": 6,
+        "preferredCount": 4,
+        "cardIncrementStep": 1,
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/phase-1.jpg"
+        },
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 42,
+            "example": "Research & Discovery"
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 24,
+            "maxChars": 160,
+            "example": "Initial research and planning with interviews, competitive analysis, and feasibility studies to ensure a solid foundation."
+          }
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ trigger: string; title: React.ReactNode; image1: string; image2: string; description: string; video?: string; image?: string; mobileImage?: string }>"
+      }
+    },
+    {
+      "import": "import BentoBase from '@/components/bento/BentoBase';",
+      "name": "BentoBase",
+      "path": "@/components/bento/BentoBase",
+      "description": "Grid layout of image-backed cards for quick visual browsing.",
+      "details": "Use to display collections where imagery is primary (features, categories, portfolios). Avoid for text-heavy use cases like testimonials or pricing tables.",
+      "constraints": {
+        "minCards": 4,
+        "cardIncrementStep": 2,
+        "textRules": {
+          "title": {
+            "minChars": 20,
+            "maxChars": 50,
+            "required": true
+          },
+          "subtitle": {
+            "minChars": 40,
+            "maxChars": 140,
+            "required": true
+          }
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ title: string; description: string }>",
+        "className": "string",
+        "gridClassName": "string",
+        "itemClassName": "string"
+      }
+    },
+    {
+      "import": "import BentoDepthThreeD from '@/components/bento/BentoDepthThreeD/BentoDepthThreeD';",
+      "name": "BentoDepthThreeD",
+      "path": "@/components/bento/BentoDepthThreeD/BentoDepthThreeD",
+      "description": "Interactive bento grid; each card tilts with cursor to create a subtle 3D depth effect.",
+      "details": "Use for visually rich feature/gallery cards where light motion helps draw attention. Designed for a fixed trio of cards displayed side‑by‑side.",
+      "constraints": {
+        "minCards": 3,
+        "maxCards": 3,
+        "cardIncrementStep": 0,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 20,
+            "maxChars": 50
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 40,
+            "maxChars": 140
+          }
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ position: 'left' | 'center' | 'right'; image: string; titleEN: string; descriptionEN: string; isCenter?: boolean }>",
+        "enableAnimation": "boolean",
+        "className": "string",
+        "gridClassName": "string",
+        "itemClassName": "string",
+        "imageContainerClassName": "string",
+        "imageClassName": "string",
+        "textContainerClassName": "string",
+        "titleClassName": "string",
+        "descriptionClassName": "string"
+      }
+    },
+    {
+      "import": "import BentoMediaGallery from '@/components/bento/BentoMediaGallery/BentoMediaGallery';",
+      "name": "BentoMediaGallery",
+      "path": "@/components/bento/BentoMediaGallery/BentoMediaGallery",
+      "description": "Image gallery grid that reveals a short text label on hover.",
+      "details": "Each card shows an image; on hover, a single‑line label appears at the bottom‑left. Use for visual galleries where labels act as brief identifiers (e.g., addresses, tags).",
+      "constraints": {
+        "preferredCards": 4,
+        "allowedCardCounts": [2, 3, 4, 5, 6, 7, 8],
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 28,
+            "singleLine": true
+          },
+          "subtitle": {
+            "use": "none"
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "overlayPosition": "bottom-left"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ title: string; image: string }>",
+        "className": "string",
+        "gridClassName": "string"
+      }
+    },
+    {
+      "import": "import BentoBorderFill from '@/components/bento/BentoBorderFill/BentoBorderFill';",
+      "name": "BentoBorderFill",
+      "path": "@/components/bento/BentoBorderFill/BentoBorderFill",
+      "description": "Non‑image bento grid where each card’s border animates (fills) on scroll.",
+      "details": "Use for text‑forward feature grids or services lists. Cards contain an icon, a short title, and a 1–2 sentence description. As the card enters the viewport, its border draws in to indicate progress.",
+      "constraints": {
+        "preferredCards": 6,
+        "allowedCardCounts": [3, 6, 9],
+        "cardIncrementStep": 3,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 12,
+            "maxChars": 40,
+            "singleLine": true
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 40,
+            "maxChars": 160
+          }
+        },
+        "imageRules": {
+          "use": "none"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ title: string; content: string }>",
+        "title": "string",
+        "className": "string",
+        "titleClassName": "string",
+        "gridClassName": "string",
+        "accordionContainerClassName": "string",
+        "itemClassName": "string",
+        "itemTitleClassName": "string",
+        "itemIconContainerClassName": "string",
+        "itemIconClassName": "string",
+        "itemContentClassName": "string"
+      }
+    },
+    {
+      "import": "import BentoHoverBorderGlow from '@/components/bento/BentoHoverBorderGlow/BentoHoverBorderGlow';",
+      "name": "BentoHoverBorderGlow",
+      "path": "@/components/bento/BentoHoverBorderGlow/BentoHoverBorderGlow",
+      "description": "Text‑first card grid whose border emits a soft glow on hover.",
+      "details": "Use for service lists or capability overviews where light hover feedback adds focus. No media slots; each card carries a title and a short supporting line.",
+      "constraints": {
+        "preferredCards": 3,
+        "allowedCardCounts": [3, 6, 9],
+        "cardIncrementStep": 3,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 12,
+            "maxChars": 40,
+            "singleLine": true
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 40,
+            "maxChars": 160
+          }
+        },
+        "imageRules": {
+          "use": "none"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ icon: LucideIcon; title: string; description: string }>",
+        "className": "string",
+        "rowClassName": "string",
+        "itemClassName": "string"
+      }
+    },
+    {
+      "import": "import BentoHoverPattern from '@/components/bento/BentoHoverPattern/BentoHoverPattern';",
+      "name": "BentoHoverPattern",
+      "path": "@/components/bento/BentoHoverPattern/BentoHoverPattern",
+      "description": "Bento grid where cards reveal subtle background patterns on hover.",
+      "details": "Designed for clean, text-driven grids where hover effects provide visual interest without relying on imagery. Works well in minimal, modern, or tech-oriented layouts.",
+      "constraints": {
+        "preferredCards": 6,
+        "allowedCardCounts": [3, 6, 9],
+        "cardIncrementStep": 3,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 10,
+            "maxChars": 36
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 40,
+            "maxChars": 160
+          }
+        },
+        "imageRules": {
+          "use": "none"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ icon?: LucideIcon; value: string; description?: string }>",
+        "className": "string",
+        "rowClassName": "string",
+        "itemClassName": "string",
+        "valueClassName": "string",
+        "descriptionClassName": "string",
+        "gradientClassName": "string",
+        "button": "{ variant?: 'none' | 'side' | 'bottom'; className?: string; childClassName?: string; iconClassName?: string }"
+      }
+    },
+    {
+      "import": "import BentoHoverInfoReveal from '@/components/bento/BentoHoverInfoReveal/BentoHoverInfoReveal';",
+      "name": "BentoHoverInfoReveal",
+      "path": "@/components/bento/BentoHoverInfoReveal/BentoHoverInfoReveal",
+      "description": "Image card grid where detailed info reveals on hover.",
+      "details": "Use for image-first grids that progressively disclose supporting information. Cards start with a clean visual state and reveal title and description content when hovered. Ideal for showcasing portfolios, categories, or case studies with a balance of imagery and text.",
+      "constraints": {
+        "preferredCards": 5,
+        "allowedCardCounts": [2, 3, 4, 5],
+        "minCards": 2,
+        "maxCards": 5,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 8,
+            "maxChars": 36
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 30,
+            "maxChars": 160
+          }
+        },
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ id: string; title: string; description: string; imageSrc: string }>",
+        "enableHoverAnimation": "boolean",
+        "showImages": "boolean",
+        "className": "string",
+        "gridClassName": "string",
+        "itemClassName": "string"
+      }
+    },
+    {
+      "import": "import BentoKPISimple from '@/components/bento/BentoKPISimple';",
+      "name": "BentoKPISimple",
+      "path": "@/components/bento/BentoKPISimple",
+      "description": "Simple KPI grid showing key metrics with supporting text.",
+      "details": "Use when you need a lightweight way to display KPIs or statistics without images or interactivity. Best for dashboards, reports, or sections highlighting performance metrics.",
+      "constraints": {
+        "preferredCards": 4,
+        "allowedCardCounts": [2, 3, 4, 5, 6, 7, 8],
+        "minCards": 2,
+        "maxCards": 8,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 1,
+            "maxChars": 12
+          },
+          "content": {
+            "required": true,
+            "minChars": 12,
+            "maxChars": 100
+          }
+        },
+        "imageRules": {
+          "use": "none"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ value: string; description: string }>",
+        "className": "string",
+        "gridClassName": "string",
+        "itemClassName": "string",
+        "valueClassName": "string",
+        "descriptionClassName": "string",
+        "gradientColors": "{ from: string; to: string }"
+      }
+    },
+    {
+      "import": "import BentoStepSimple from '@/components/bento/BentoStepSimple';",
+      "name": "BentoStepSimple",
+      "path": "@/components/bento/BentoStepSimple",
+      "description": "Step-by-step content cards for processes or sequential explanations.",
+      "details": "Use to explain multi-step processes or flows in a simple, text-first layout. Each step is numbered, followed by a title and descriptive text. Works best when steps are short, clear, and sequential.",
+      "constraints": {
+        "preferredCards": 3,
+        "allowedCardCounts": [2, 3, 4, 5, 6],
+        "minCards": 2,
+        "maxCards": 6,
+        "cardIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 28
+          },
+          "content": {
+            "required": true,
+            "minChars": 40,
+            "maxChars": 300
+          }
+        },
+        "imageRules": {
+          "use": "none"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ title: string; description: string }>",
+        "className": "string",
+        "containerClassName": "string",
+        "stepClassName": "string",
+        "numberClassName": "string",
+        "titleClassName": "string",
+        "descriptionClassName": "string"
+      }
+    },
+    {
+      "import": "import BentoKPIStandard from '@/components/bento/BentoKPIStandard';",
+      "name": "BentoKPIStandard",
+      "path": "@/components/bento/BentoKPIStandard",
+      "description": "Structured KPI cards with a large numeric value, a short unit/label, and an optional subtitle.",
+      "details": "Use for impact metrics (e.g., revenue, users, projects). Each card separates the numeric value (e.g., 100) from its label (e.g., million) and an optional subtitle sentence for context. No images.",
+      "constraints": {
+        "preferredCards": 3,
+        "allowedCardCounts": [3, 6],
+        "minCards": 3,
+        "maxCards": 6,
+        "cardIncrementStep": 3,
+        "textRules": {
+          "value": {
+            "required": true,
+            "minChars": 1,
+            "maxChars": 8,
+            "hint": "Large numeric string; allows digits and symbols like k/M/+, e.g., '100', '2.5M', '45ms'."
+          },
+          "label": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 16,
+            "hint": "Short unit/qualifier such as 'million', 'thousand', 'projects'."
+          },
+          "subtitle": {
+            "required": false,
+            "minChars": 30,
+            "maxChars": 140,
+            "hint": "One sentence giving context for the KPI."
+          }
+        },
+        "imageRules": {
+          "use": "none"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ value: string; description: string; longDescription?: string; icon?: LucideIcon; button?: { variant?: 'side' | 'none' | 'bottom'; className?: string; childClassName?: string; iconClassName?: string } }>",
+        "className": "string",
+        "gridClassName": "string",
+        "itemClassName": "string",
+        "valueClassName": "string",
+        "descriptionClassName": "string",
+        "longDescriptionClassName": "string",
+        "iconContainerClassName": "string",
+        "iconClassName": "string",
+        "color": "string"
+      }
+    },
+    {
+      "import": "import BentoPricingTable from '@/components/bento/BentoPricingTable';",
+      "name": "BentoPricingTable",
+      "path": "@/components/bento/BentoPricingTable",
+      "description": "Pricing table of plan cards with price, short subtitle, features list, and CTA.",
+      "details": "Use for subscription or tiered pricing. Each card shows a plan name, a large price value with a short cadence suffix (e.g., “/mth”), a one-line subtitle, a checklist of features, and a CTA. No images.",
+      "constraints": {
+        "minCards": 3,
+        "maxCards": 3,
+        "cardIncrementStep": 0,
+        "textRules": {
+          "plan": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 18,
+            "example": "Standard"
+          },
+          "priceValue": {
+            "required": true,
+            "minChars": 1,
+            "maxChars": 8,
+            "example": "29"
+          },
+          "priceSuffix": {
+            "required": true,
+            "minChars": 2,
+            "maxChars": 10,
+            "example": "/mth"
+          },
+          "subtitle": {
+            "required": false,
+            "minChars": 20,
+            "maxChars": 120,
+            "example": "Per user, per month billed annually."
+          },
+          "badge": {
+            "required": false,
+            "minChars": 3,
+            "maxChars": 16,
+            "example": "Professional"
+          },
+          "ctaLabel": {
+            "required": true,
+            "minChars": 2,
+            "maxChars": 20,
+            "example": "Get started"
+          },
+          "feature": {
+            "required": true,
+            "minChars": 12,
+            "maxChars": 90,
+            "example": "Unlimited active reviews"
+          }
+        },
+        "listRules": {
+          "featuresPerCard": {
+            "min": 3,
+            "max": 12
+          }
+        },
+        "imageRules": {
+          "use": "none"
+        }
+      },
+      "propsSchema": {
+        "items": "Array<{ badge?: string; badgeIcon?: LucideIcon; price: string; subtitle?: string; features?: string[] }>",
+        "className": "string",
+        "gridClassName": "string",
+        "itemClassName": "string",
+        "badgeClassName": "string",
+        "priceClassName": "string",
+        "subtitleClassName": "string",
+        "featuresClassName": "string",
+        "featureItemClassName": "string"
+      }
+    },
+    {
+      "import": "import TextboxStandard from '@/components/textbox/TextboxStandard';",
+      "name": "TextboxStandard",
+      "path": "@/components/textbox/TextboxStandard",
+      "description": "A clean copy block with a prominent heading and a supporting body paragraph. Ideal for short, impactful statements or section intros.",
+      "details": "Two-text layout only (no eyebrow). Defaults to centered layout with sensible max width, but supports alignment overrides. Compatible with all text animation tokens used by the project’s text components (apply to heading and/or body).",
+      "constraints": {
+        "textRules": {
+          "heading": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 64,
+            "example": "Secure by design"
+          },
+          "body": {
+            "required": true,
+            "minChars": 40,
+            "maxChars": 260,
+            "example": "Bank confidently with enhanced FDIC coverage up to hundreds of millions, granular user controls, advanced authentication, and federally regulated bank partners."
+          }
+        }
+      },
+      "propsSchema": {
+        "title": "React.ReactNode",
+        "description": "React.ReactNode",
+        "titleClassName": "string",
+        "descriptionClassName": "string"
+      }
+    },
+    {
+      "import": "import TextboxLayoutHorizontal from '@/components/textbox/TextboxLayoutHorizontal';",
+      "name": "TextboxLayoutHorizontal",
+      "path": "@/components/textbox/TextboxLayoutHorizontal",
+      "description": "Two-column textbox layout with heading on the left and body copy on the right.",
+      "details": "Use for sections where a bold headline should stand out in one column while explanatory text sits neatly beside it. Ideal for feature callouts or concise value propositions. No buttons or tags are included in this layout to keep focus on text clarity.",
+      "constraints": {
+        "textRules": {
+          "heading": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 80
+          },
+          "body": {
+            "required": true,
+            "minChars": 30,
+            "maxChars": 260
+          }
+        }
+      },
+      "propsSchema": {
+        "title": "React.ReactNode",
+        "description": "React.ReactNode",
+        "className": "string",
+        "titleClassName": "string",
+        "descriptionClassName": "string",
+        "reverseLayout": "boolean",
+        "alignStart": "boolean"
+      }
+    },
+    {
+      "import": "import TextboxContentRich from '@/components/textbox/TextboxContentRich';",
+      "name": "TextboxContentRich",
+      "path": "@/components/textbox/TextboxContentRich",
+      "description": "Content-forward textbox with a prominent heading, supportive body copy, and exactly two calls-to-action.",
+      "details": "Use when the message itself is the hero. Large display heading sits above a short paragraph, followed by two side-by-side buttons (primary + secondary). No tag, media, or extra adornments so the copy remains the focus.",
+      "constraints": {
+        "minButtons": 2,
+        "maxButtons": 2,
+        "preferredCount": 2,
+        "textRules": {
+          "heading": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 80
+          },
+          "body": {
+            "required": true,
+            "minChars": 30,
+            "maxChars": 260
+          },
+          "button": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 32
+          }
+        }
+      },
+      "propsSchema": {
+        "title": "React.ReactNode",
+        "description": "React.ReactNode",
+        "children": "React.ReactNode",
+        "className": "string",
+        "titleClassName": "string",
+        "descriptionClassName": "string",
+        "contentClassName": "string",
+        "disableAnimation": "boolean"
+      }
+    },
+    {
+      "import": "import TextboxTaggable from '@/components/textbox/TextboxTaggable';",
+      "name": "TextboxTaggable",
+      "path": "@/components/textbox/TextboxTaggable",
+      "description": "Textbox layout with a tag, heading, body text, and exactly two buttons.",
+      "details": "Use TextboxTaggable when you need a text block anchored by a small tag, a strong heading, supporting body copy, and exactly two calls-to-action. The tag sits above the heading, while the buttons are positioned below the body. Consistent layout ensures clarity and engagement.",
+      "constraints": {
+        "minButtons": 2,
+        "maxButtons": 2,
+        "preferredCount": 2,
+        "textRules": {
+          "tag": {
+            "required": true,
+            "minChars": 2,
+            "maxChars": 24
+          },
+          "heading": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 60
+          },
+          "body": {
+            "required": true,
+            "minChars": 24,
+            "maxChars": 220
+          },
+          "button": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 32
+          }
+        }
+      },
+      "propsSchema": {
+        "logoSrc": "string",
+        "logoAlt": "string",
+        "leftButtonText": "string",
+        "rightButtonText": "string",
+        "onLeftButtonClick": "function",
+        "onRightButtonClick": "function",
+        "className": "string",
+        "containerClassName": "string",
+        "logoClassName": "string",
+        "buttonClassName": "string",
+        "buttonContentClassName": "string",
+        "buttonBgColor": "string",
+        "buttonHoverBgColor": "string",
+        "buttonTextColor": "string",
+        "buttonHoverTextColor": "string"
+      }
+    },
+    {
+      "import": "import NavbarBase from '@/components/navigation/NavbarBase';",
+      "name": "NavbarBase",
+      "category": "navigation",
+      "path": "@/components/navigation/NavbarBase",
+      "description": "Minimal navbar with centered brand and two side actions (left & right).",
+      "details": "Use as the foundation for simple headers. The brand/logo is centered; optional left and right actions can be buttons or links (e.g., Menu and Contact). No dropdowns or overlays.",
+      "constraints": {
+        "layout": {
+          "centerBrand": true,
+          "sideActions": 2,
+          "stickyAllowed": true
+        },
+        "brandRules": {
+          "label": {
+            "required": true,
+            "minChars": 2,
+            "maxChars": 20,
+            "example": "Webild"
+          },
+          "hrefRequired": false
+        },
+        "leftActionRules": {
+          "label": {
+            "required": false,
+            "minChars": 2,
+            "maxChars": 16,
+            "example": "Menu"
+          }
+        },
+        "rightActionRules": {
+          "label": {
+            "required": false,
+            "minChars": 2,
+            "maxChars": 16,
+            "example": "Contact"
+          }
+        }
+      },
+      "propsSchema": {
+        "logoSrc": "string",
+        "logoAlt": "string",
+        "leftButtonText": "string",
+        "rightButtonText": "string",
+        "onLeftButtonClick": "function",
+        "onRightButtonClick": "function",
+        "className": "string",
+        "containerClassName": "string",
+        "logoClassName": "string",
+        "buttonClassName": "string",
+        "buttonContentClassName": "string",
+        "buttonBgColor": "string",
+        "buttonHoverBgColor": "string",
+        "buttonTextColor": "string",
+        "buttonHoverTextColor": "string"
+      }
+    },
+    {
+      "import": "import NavbarStyleApple from '@/components/navigation/NavbarStyleApple/NavbarStyleApple';",
+      "name": "NavbarStyleApple",
+      "category": "navigation",
+      "path": "@/components/navigation/NavbarStyleApple/NavbarStyleApple",
+      "description": "Minimal Apple-style navigation bar with brand/logo on the left and inline navigation links aligned right.",
+      "details": "Use for clean, product-focused websites where the navbar should be subtle and not distract from main content. Keeps typography and spacing minimal with a focus on elegance and clarity.",
+      "constraints": {
+        "minLinks": 3,
+        "maxLinks": 7,
+        "preferredCount": 5,
+        "logoRules": {
+          "required": true,
+          "minChars": 2,
+          "maxChars": 20,
+          "example": "Webild"
+        },
+        "linkRules": {
+          "title": {
+            "required": true,
+            "minChars": 2,
+            "maxChars": 15,
+            "example": "Solutions"
+          },
+          "href": {
+            "required": true,
+            "format": "url or hash",
+            "example": "/solutions"
+          }
+        }
+      },
+      "propsSchema": {
+        "navItems": "Array<{ name: string; id: string }>",
+        "logoSrc": "string",
+        "logoAlt": "string",
+        "brandName": "string"
+      }
+    },
+    {
+      "import": "import NavbarLayoutFloatingOverlay from '@/components/navigation/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';",
+      "name": "NavbarLayoutFloatingOverlay",
+      "category": "navigation",
+      "path": "@/components/navigation/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay",
+      "description": "Floating rounded navbar with right‑side CTA and a circular menu button. Clicking the button opens a rounded overlay panel with the site menu.",
+      "details": "Use for minimalist headers where the primary navigation lives in an overlay. Default state shows logo at left, optional CTA chip and a menu icon at right. The overlay slides in and lists links vertically with an optional title and close control.",
+      "constraints": {
+        "links": {
+          "minItems": 3,
+          "maxItems": 6,
+          "preferredCount": 4,
+          "label": {
+            "minChars": 2,
+            "maxChars": 24,
+            "example": "Solutions"
+          }
+        },
+        "cta": {
+          "allowed": true,
+          "label": {
+            "minChars": 3,
+            "maxChars": 18,
+            "example": "Join Now"
+          }
+        },
+        "logo": {
+          "textOrImage": true,
+          "altRequiredIfImage": true,
+          "examples": {
+            "text": "Webild",
+            "image": "https://example.com/logo.svg"
+          }
+        }
+      },
+      "propsSchema": {
+        "navItems": "Array<{ name: string; id: string }>",
+        "logoSrc": "string",
+        "logoWidth": "number",
+        "logoHeight": "number",
+        "buttonText": "string",
+        "onButtonClick": "function"
+      }
+    },
+    {
+      "import": "import NavbarLayoutFloatingInline from '@/components/navigation/NavbarLayoutFloatingInline';",
+      "name": "NavbarLayoutFloatingInline",
+      "category": "navigation",
+      "path": "@/components/navigation/NavbarLayoutFloatingInline",
+      "description": "Floating inline navbar with centered links, left-aligned logo, and right-aligned call-to-action button.",
+      "details": "Use for desktop-focused layouts where navigation is always visible. The navbar floats with rounded edges, logo sits on the left, links are inline in the center, and an optional CTA button appears on the right.",
+      "constraints": {
+        "links": {
+          "minItems": 3,
+          "maxItems": 6,
+          "preferredCount": 4,
+          "label": {
+            "minChars": 2,
+            "maxChars": 24,
+            "example": "Community"
+          }
+        },
+        "cta": {
+          "allowed": true,
+          "label": {
+            "minChars": 3,
+            "maxChars": 18,
+            "example": "Get Started"
+          }
+        },
+        "logo": {
+          "textOrImage": true,
+          "altRequiredIfImage": true,
+          "examples": {
+            "text": "Webild",
+            "image": "https://example.com/logo.svg"
+          }
+        }
+      },
+      "propsSchema": {
+        "navItems": "Array<{ name: string; id: string }>",
+        "logoSrc": "string",
+        "logoWidth": "number",
+        "logoHeight": "number",
+        "buttonText": "string",
+        "onButtonClick": "function",
+        "className": "string",
+        "buttonClassName": "string",
+        "buttonBgClassName": "string",
+        "navItemClassName": "string"
+      }
+    },
+    {
+      "import": "import NavbarStyleMinimal from '@/components/navigation/NavbarStyleMinimal';",
+      "name": "NavbarStyleMinimal",
+      "category": "navigation",
+      "path": "@/components/navigation/NavbarStyleMinimal",
+      "description": "A minimal navbar with left-aligned logo and optional right-aligned call-to-action button.",
+      "details": "Use when a simple, distraction-free navigation is required. No inline navigation links are shown, only a logo and an optional CTA button on the right.",
+      "constraints": {
+        "logo": {
+          "textOrImage": true,
+          "altRequiredIfImage": true,
+          "examples": {
+            "text": "Webild",
+            "image": "https://example.com/logo.svg"
+          }
+        },
+        "cta": {
+          "allowed": true,
+          "label": {
+            "minChars": 3,
+            "maxChars": 18,
+            "example": "Get Started"
+          }
+        }
+      },
+      "propsSchema": {
+        "logoSrc": "string",
+        "logoWidth": "number",
+        "logoHeight": "number",
+        "logoClassName": "string",
+        "buttonText": "string",
+        "onButtonClick": "function",
+        "className": "string",
+        "buttonType": "string",
+        "buttonClassName": "string",
+        "buttonContentClassName": "string",
+        "buttonBgColor": "string",
+        "buttonHoverBgColor": "string",
+        "buttonTextColor": "string",
+        "buttonHoverTextColor": "string"
+      }
+    },
+    {
+      "import": "import NavbarLayoutSplitBottom from '@/components/navigation/NavbarLayoutSplitBottom/NavbarLayoutSplitBottom';",
+      "name": "NavbarLayoutSplitBottom",
+      "category": "navigation",
+      "path": "@/components/navigation/NavbarLayoutSplitBottom/NavbarLayoutSplitBottom",
+      "description": "A compact bottom-style navbar with split navigation items and a pill-shaped highlight for the active item.",
+      "details": "Use for single-page layouts or minimalistic sites where the navbar should be placed at the bottom or in compact header sections. The active route is visually emphasized with a rounded pill highlight.",
+      "constraints": {
+        "navItems": {
+          "min": 2,
+          "max": 6,
+          "labelRules": {
+            "minChars": 3,
+            "maxChars": 16,
+            "example": "Services"
+          }
+        },
+        "activeItem": {
+          "required": true,
+          "mustMatchOneNavItem": true
+        }
+      },
+      "propsSchema": {
+        "logoSrc": "string",
+        "logoWidth": "number",
+        "logoHeight": "number",
+        "buttonText": "string",
+        "onButtonClick": "function",
+        "navItems": "Array<{ name: string; id: string }>",
+        "defaultSelectorValue": "string",
+        "onSelectorChange": "function",
+        "className": "string",
+        "enableScrollDetection": "boolean"
+      }
+    },
+    {
+      "import": "import AccordionStandardExpand from '@/components/accordions/AccordionStandardExpand';",
+      "name": "AccordionStandardExpand",
+      "path": "@/components/accordions/AccordionStandardExpand",
+      "description": "Clean FAQ-style accordion where each row expands to reveal content. Right-aligned plus button toggles open state.",
+      "details": "Use for FAQs, capability lists, or sections where short headings expand into longer explanations. Keyboard and click toggles should be supported; only layout/styling defined here.",
+      "constraints": {
+        "minItems": 4,
+        "maxItems": 12,
+        "preferredCount": 8,
+        "itemIncrementStep": 1,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 8,
+            "maxChars": 80,
+            "example": "Enterprise Architecture"
+          },
+          "content": {
+            "required": true,
+            "minChars": 24,
+            "maxChars": 800,
+            "example": "We design scalable systems, define service boundaries, and create roadmaps aligned to business goals."
+          }
+        }
+      },
+      "propsSchema": {
+        "items": [
+          {
+            "title": "string",
+            "content": "string"
+          }
+        ],
+        "title": "string",
+        "className": "string",
+        "titleClassName": "string",
+        "itemClassName": "string",
+        "itemTitleClassName": "string",
+        "itemIconContainerClassName": "string",
+        "itemIconClassName": "string",
+        "itemContentClassName": "string"
+      }
+    },
+    {
+      "import": "import AccordionLeftMediaTextExpand from '@/components/accordions/AccordionLeftMediaTextExpand';",
+      "name": "AccordionLeftMediaTextExpand",
+      "path": "@/components/accordions/AccordionLeftMediaTextExpand",
+      "description": "Accordion layout with a static media (image or video) pinned to the left, while expandable FAQ items are displayed on the right.",
+      "details": "Use this when you want an accordion FAQ section that is visually anchored by an image or video on the left-hand side. Works well for FAQs, product details, or knowledge sections that need both media and expandable answers.",
+      "constraints": {
+        "minItems": 3,
+        "maxItems": 10,
+        "preferredCount": 6,
+        "mediaRules": {
+          "required": true,
+          "type": "image|video",
+          "altRequired": true,
+          "example": "https://example.com/faq-hero.jpg"
+        },
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 8,
+            "maxChars": 80,
+            "example": "Enterprise Architecture"
+          },
+          "content": {
+            "required": true,
+            "minChars": 30,
+            "maxChars": 800,
+            "example": "We define service boundaries, design scalable systems, and create long-term technical roadmaps aligned to business goals."
+          }
+        }
+      },
+      "propsSchema": {
+        "items": [
+          {
+            "title": "string",
+            "content": "string"
+          }
+        ],
+        "imageSrc": "string",
+        "imageAlt": "string",
+        "title": "string",
+        "className": "string",
+        "titleClassName": "string",
+        "gridClassName": "string",
+        "imageContainerClassName": "string",
+        "imageClassName": "string",
+        "accordionContainerClassName": "string",
+        "itemClassName": "string",
+        "itemTitleClassName": "string",
+        "itemIconContainerClassName": "string",
+        "itemIconClassName": "string",
+        "itemContentClassName": "string"
+      }
+    },
+    {
+      "import": "import AccordionPlainExpand from '@/components/accordions/AccordionPlainExpand';",
+      "name": "AccordionPlainExpand",
+      "path": "@/components/accordions/AccordionPlainExpand",
+      "description": "Plain accordion list with expandable items. No media; just titles and body text.",
+      "details": "Use for clean FAQ or Q&A sections where only text is required. Each row shows a title with a plus icon; clicking expands the body. Supports multiple open items or single‑open mode.",
+      "constraints": {
+        "minItems": 3,
+        "maxItems": 12,
+        "preferredCount": 8,
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 80,
+            "example": "Enterprise Architecture"
+          },
+          "content": {
+            "required": true,
+            "minChars": 50,
+            "maxChars": 800,
+            "example": "Building scalable and maintainable application structures with modern design patterns and best practices."
+          }
+        }
+      },
+      "propsSchema": {
+        "items": [
+          {
+            "title": "string",
+            "content": "string"
+          }
+        ],
+        "title": "string",
+        "className": "string",
+        "titleClassName": "string",
+        "dividerClassName": "string",
+        "itemClassName": "string",
+        "itemTitleClassName": "string",
+        "itemIconContainerClassName": "string",
+        "itemIconClassName": "string",
+        "itemContentClassName": "string"
+      }
+    },
+    {
+      "import": "import AccordionLayoutSideTextExpand from '@/components/accordions/AccordionLayoutSideTextExpand';",
+      "name": "AccordionLayoutSideTextExpand",
+      "path": "@/components/accordions/AccordionLayoutSideTextExpand",
+      "description": "Two‑column FAQ layout with a large heading/intro on the left and an expandable accordion list on the right.",
+      "details": "Use when you want marketing copy or section context alongside an FAQ. Left column shows a heading and short description. Right column lists accordion items; each item expands to reveal body text. No images.",
+      "constraints": {
+        "minItems": 3,
+        "maxItems": 7,
+        "preferredCount": 5,
+        "textRules": {
+          "heading": {
+            "required": true,
+            "minChars": 8,
+            "maxChars": 48,
+            "example": "Frequently asked questions"
+          },
+          "intro": {
+            "required": true,
+            "minChars": 0,
+            "maxChars": 220,
+            "example": "Find answers to common questions about our services and processes."
+          },
+          "title": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 80,
+            "example": "Enterprise Architecture"
+          },
+          "content": {
+            "required": true,
+            "minChars": 50,
+            "maxChars": 800,
+            "example": "Building scalable and maintainable application structures with modern design patterns and best practices."
+          }
+        }
+      },
+      "propsSchema": {
+        "items": [
+          {
+            "title": "string",
+            "content": "string"
+          }
+        ],
+        "title": "string",
+        "description": "string",
+        "className": "string",
+        "gridClassName": "string",
+        "sideContainerClassName": "string",
+        "titleClassName": "string",
+        "descriptionClassName": "string",
+        "accordionContainerClassName": "string",
+        "dividerClassName": "string",
+        "itemClassName": "string",
+        "itemTitleClassName": "string",
+        "itemIconContainerClassName": "string",
+        "itemIconClassName": "string",
+        "itemContentClassName": "string"
+      }
+    },
+    {
+      "import": "import AccordionLayoutBentoExpand from '@/components/accordions/AccordionLayoutBentoExpand';",
+      "name": "AccordionLayoutBentoExpand",
+      "path": "@/components/accordions/AccordionLayoutBentoExpand",
+      "description": "Bento-style accordion grid: items arranged in two (or more) columns; each tile expands in place to reveal its content.",
+      "details": "Use for dense FAQ/grouped info where categories should be scannable in a grid. Titles are always visible; clicking a tile expands it to show the answer inside that tile. No images.",
+      "constraints": {
+        "minItems": 4,
+        "maxItems": 12,
+        "preferredCount": 8,
+        "layoutRules": {
+          "minColumns": 2,
+          "maxColumns": 3,
+          "preferredColumns": 2
+        },
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 80,
+            "example": "Enterprise Architecture"
+          },
+          "content": {
+            "required": true,
+            "minChars": 50,
+            "maxChars": 800,
+            "example": "Scalable application structures using modern patterns and cloud‑native practices."
+          }
+        }
+      },
+      "propsSchema": {
+        "items": [
+          {
+            "title": "string",
+            "content": "string"
+          }
+        ],
+        "title": "string",
+        "className": "string",
+        "containerClassName": "string",
+        "titleClassName": "string",
+        "gridClassName": "string",
+        "itemClassName": "string",
+        "itemTitleClassName": "string",
+        "itemIconContainerClassName": "string",
+        "itemIconClassName": "string",
+        "itemContentClassName": "string"
+      }
+    }
+  ],
+  "sectionRegistry": [
+    {
+      "name": "BillboardHero",
+      "import": "import BillboardHero from '@/components/sections/layouts/hero/BillboardHero';",
+      "path": "@/components/sections/layouts/hero/BillboardHero",
+      "propsSchema": {
+        "title": "string",
+        "subtitle": "string"
+      },
+      "category": "hero",
+      "baseGenerationEligible": true,
+      "description": "A versatile hero section with bold heading and subheading. Supports both fun/trendy and futuristic/premium styles with conditional backgrounds and layouts.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful with animated typography, vibrant colors, and a backdrop image for energy and creativity.",
+          "futuristic_premium": "Sleek and minimal with starfield or gradient backgrounds. No backdrop image slot — focused on clean typography and high-end vibes."
+        }
+      },
+      "imagePolicy": {
+        "reuseMascotAcrossSite": false,
+        "allowBackdropPerSection": true
+      }
+    },
+    {
+      "name": "VoidHero",
+      "category": "hero",
+      "propsSchema": {
+        "title": "string",
+        "description": "string",
+        "tagLabel": "string",
+        "primaryButtonText": "string",
+        "secondaryButtonText": "string"
+      },
+      "import": "import VoidHero from '@/components/sections/layouts/hero/VoidHero';",
+      "path": "@/components/sections/layouts/hero/VoidHero",
+      "style": ["futuristic_premium"],
+      "baseGenerationEligible": true,
+      "description": "A minimalist hero section designed for futuristic and out-of-the-box experiences. Best used when the brand emphasizes sleek design, space-like themes, or high-tech products. This section excludes background images and visuals, focusing on clean typography, subtle gradients, and strong CTAs."
+    },
+    {
+      "name": "TokenBillboardHero",
+      "propsSchema": {
+        "title": "string",
+        "subtitle": "string",
+        "contractAddress": "string",
+        "copyButtonText": "string",
+        "copiedText": "string"
+      },
+      "import": "import TokenBillboardHero from '@/components/sections/layouts/hero/TokenBillboardHero';",
+      "path": "@/components/sections/layouts/hero/TokenBillboardHero",
+      "category": "hero",
+      "baseGenerationEligible": true,
+      "description": "Billboard-style hero that surfaces a token/contract ID under the subheading. Supports fun/trendy (with an illustrated backdrop image) and futuristic/premium (no backdrop, starfield/gradient). Ideal for meme/coin launches and Web3 projects.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful with vibrant color, animated typography, and a generated backdrop image for energy/whimsy.",
+          "futuristic_premium": "Sleek, minimal presentation on starfield/gradient; no backdrop image—focus on clean typographic hierarchy."
+        }
+      },
+      "imagePolicy": {
+        "reuseMascotAcrossSite": false,
+        "allowBackdropPerSection": true
+      }
+    },
+    {
+      "name": "SplitHero",
+      "propsSchema": {
+        "title": "string",
+        "subtitle": "string",
+        "primaryButtonText": "string",
+        "secondaryButtonText": "string",
+        "onPrimaryButtonClick": "function",
+        "onSecondaryButtonClick": "function"
+      },
+      "import": "import SplitHero from '@/components/sections/layouts/hero/SplitHero';",
+      "path": "@/components/sections/layouts/hero/SplitHero",
+      "category": "hero",
+      "baseGenerationEligible": true,
+      "description": "Split hero with text on one side and mascot/visual media on the other. Supports fun & trendy and futuristic & premium styles, controlled via style tokens.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful layout with bold typography, colorful buttons, and rounded accents.",
+          "futuristic_premium": "Sleek, minimal layout with clean typography, glassmorphic buttons, and subtle gradients."
+        }
+      }
+    },
+    {
+      "name": "FrameHero",
+      "category": "hero",
+      "import": "import FrameHero from '@/components/sections/layouts/hero/FrameHero';",
+      "path": "@/components/sections/layouts/hero/FrameHero",
+      "style": ["fun_trendy"],
+      "propsSchema": {
+        "title": "string",
+        "description": "string",
+        "primaryButtonText": "string",
+        "secondaryButtonText": "string"
+      },
+      "baseGenerationEligible": true,
+      "description": "Framed hero section perfect for fun & trendy projects. Uses a background image as the main visual with heading, subheading, and two mandatory CTAs placed on top. Creates a bold, eye-catching entry point while keeping the focus on the framed backdrop."
+    },
+    {
+      "name": "SplitAbout",
+      "import": "import SplitAbout from '@/components/sections/layouts/about/SplitAbout';",
+      "path": "@/components/sections/layouts/about/SplitAbout",
+      "propsSchema": {
+        "description": "string"
+      },
+      "category": "about",
+      "baseGenerationEligible": true,
+      "description": "Split About layout with oversized heading on the left and multi-paragraph body on the right. Style differs by vibe: playful with bold type and colors vs futuristic with gradients and sleek minimalism.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Bold playful heading, vibrant blue backgrounds, fun retro typography.",
+          "futuristic_premium": "Gradient or metallic heading, dark cosmic backgrounds, sleek typography."
+        }
+      }
+    },
+    {
+      "name": "SocialsAbout",
+      "import": "import SocialsAbout from '@/components/sections/layouts/about/SocialsAbout';",
+      "path": "@/components/sections/layouts/about/SocialsAbout",
+      "category": "about",
+      "baseGenerationEligible": true,
+      "description": "About section with a bold heading, supporting copy, a mascot/product image, and a row of individual social buttons. Styling switches by vibe: playful (fun_trendy) vs sleek (futuristic_premium).",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Vibrant colors, chunky playful type, rounded buttons/badges.",
+          "futuristic_premium": "Dark cosmic backgrounds, subtle glows, glassy/gradient buttons."
+        }
+      },
+      "propsSchema": {
+        "title": "string",
+        "descriptions": "string[]"
+      }
+    },
+    {
+      "name": "CtaAbout",
+      "propsSchema": {
+        "title": "string",
+        "descriptions": "string[]"
+      },
+      "import": "import CtaAbout from '@/components/sections/layouts/about/CtaAbout';",
+      "path": "@/components/sections/layouts/about/CtaAbout",
+      "category": "about",
+      "baseGenerationEligible": true,
+      "description": "Split About with big heading + supporting copy on the left, image on the right, and one primary CTA. Style swaps between fun/trendy and futuristic/premium without changing content structure.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful, punchy typography on a colorful canvas; rounded card for the image; bright button.",
+          "futuristic_premium": "Sleek gradient/starfield, subtle glass card around the image, refined CTA."
+        }
+      },
+      "layoutHints": {
+        "imagePosition": "right",
+        "textAlign": "left",
+        "maxContentWidth": "xl"
+      }
+    },
+    {
+      "name": "3DHTB",
+      "propsSchema": {
+        "title": "string",
+        "steps": "Array<{title: string, description: string, image: string, position: string, isCenter: boolean}>"
+      },
+      "import": "import HowToBuy3D from '@/components/sections/layouts/howtobuy/3DHTB';",
+      "path": "@/components/sections/layouts/howtobuy/3DHTB",
+      "category": "how_to_buy",
+      "baseGenerationEligible": true,
+      "description": "How-to-Buy section rendered as three 3D tilt cards using BentoDepthThreeD. Works for both fun/trendy and futuristic/premium vibes; styling comes from the active design tokens.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful trading-card feel with lively motion and bold colors.",
+          "futuristic_premium": "Sleek, high-contrast cards with subtle depth and refined motion."
+        }
+      }
+    },
+    {
+      "name": "2DHTB",
+      "import": "import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';",
+      "path": "@/components/sections/layouts/howtobuy/2DHTB",
+      "propsSchema": {
+          "variant": "'reveal' | 'simple'"
+      },
+      "category": "howToBuy",
+      "baseGenerationEligible": true,
+      "description": "How-to-Buy section with three fixed steps displayed as 2D icon cards (no images). Each card includes a step title, icon, and supporting description. Mandatory structure — ideal for fun/trendy meme brands or sleek futuristic projects.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful layout with bold typography, pastel or vibrant backgrounds, and outlined icons.",
+          "futuristic_premium": "Minimal, clean cards with glass/gradient backgrounds, modern typography, and sleek line icons."
+        }
+      },
+      "constraints": {
+        "minCards": 3,
+        "maxCards": 6,
+        "preferredCards": 3
+      }
+    },
+    {
+      "name": "TextGridTokenomics",
+      "import": "import TextGridTokenomics from '@/components/sections/layouts/tokenomics/TextGridTokenomics';",
+      "propsSchema": {
+        "title": "string",
+        "description": "string",
+        "tokenData": "Array<{ value: string, description: string }>"
+      },
+      "path": "@/components/sections/layouts/tokenomics/TextGridTokenomics",
+      "category": "tokenomics",
+      "baseGenerationEligible": true,
+      "description": "Tokenomics section displayed as a grid of 3–6 stat cards plus a descriptive body. Each card represents a key stat (e.g., Ticker, Network, Supply, Liquidity, Taxes, Ownership). Supports both fun/trendy and futuristic/premium styles.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful with bold heading typography, vibrant backgrounds, and framed stat cards.",
+          "futuristic_premium": "Sleek with dark/gradient backgrounds, glassmorphic cards, and modern typography."
+        }
+      },
+      "rules": {
+        "gridLayout": {
+          "minColumns": 3,
+          "maxColumns": 3,
+          "rowsFlexible": true
+        }
+      }
+    },
+    {
+      "name": "NumberGridTokenomics",
+      "category": "tokenomics",
+      "import": "import NumberGridTokenomics from '@/components/sections/layouts/tokenomics/NumberGridTokenomics';",
+      "propsSchema": {
+        "title": "string",
+        "description": "string",
+        "kpiItems": "Array<{ value: string, description: string }>"
+      },
+      "path": "@/components/sections/layouts/tokenomics/NumberGridTokenomics",
+      "style": ["fun_trendy", "futuristic_premium"],
+      "baseGenerationEligible": true,
+      "description": "Tokenomics section displayed as a number grid. Each card shows a main number, a label, and optional supporting description. Designed for scalability: minimum 2 cards, maximum 8 cards, preferred 4."
+    },
+    {
+      "name": "BigNumberTokenomics",
+      "import": "import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';",
+      "path": "@/components/sections/layouts/tokenomics/BigNumberTokenomics",
+      "category": "tokenomics",
+      "baseGenerationEligible": true,
+      "propsSchema": {
+        "title": "string",
+        "description": "string",
+        "kpiItems": "Array<{ value: string, description: string, longDescription: string, icon: LucideIcon }>"
+      },
+      "description": "Three-card Tokenomics stats grid. Left column shows the H1, right column shows an explanatory paragraph. Each card contains a numeric value, a short unit/label (e.g., “Million”, “Projects”), a one-sentence description, and a small icon in the lower-left. No images.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful white cards with bold display numbers and outline accents.",
+          "futuristic_premium": "Glass/dark cards with soft glows and premium typography."
+        }
+      }
+    },
+    {
+      "name": "ExpandingGridTokenomics",
+      "import": "import ExpandingGridTokenomics from '@/components/sections/layouts/tokenomics/ExpandingGridTokenomics';",
+      "path": "@/components/sections/layouts/tokenomics/ExpandingGridTokenomics",
+      "category": "tokenomics",
+      "propsSchema": {
+        "title": "string",
+        "description": "string",
+        "cardItems": "Array<{ id: number, title: string, description: string }>"
+      },
+      "baseGenerationEligible": true,
+      "description": "Tokenomics grid where each card shows a big number and expands on interaction to reveal explanatory copy inside. Left side has the H1; an explainer paragraph sits to the right. No images.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful white cards with bold display numbers, rounded corners, and outline accents. Plus/X affordances are styled but not required by content.",
+          "futuristic_premium": "Glass/dark cards with soft glows, premium typography, and subtle motion for expand/collapse."
+        }
+      },
+      "constraints": {
+        "minCards": 3,
+        "maxCards": 5,
+        "preferredCards": 4
+      },
+      "interaction": {
+        "expandableCards": true,
+        "behavior": "single_or_multi_expand",
+        "animation": "scale+fade"
+      }
+    },
+    {
+      "name": "PatternTokenomics",
+      "propsSchema": {
+        "title": "string",
+        "description": "string",
+        "kpiItems": "Array<{ value: string, description: string, icon: LucideIcon }>"
+      },
+      "import": "import PatternTokenomics from '@/components/sections/layouts/tokenomics/PatternTokenomics';",
+      "path": "@/components/sections/layouts/tokenomics/PatternTokenomics",
+      "category": "tokenomics",
+      "baseGenerationEligible": true,
+      "description": "Tokenomics feature grid using subtle hover patterns (no photos). Each card shows an icon, a short title, and a supporting subtitle/paragraph. Ideal for listing pillars like Architecture, Development, Design, etc.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "High-contrast cards with playful outline badges and bold headings; hover reveals a light stroked pattern.",
+          "futuristic_premium": "Glass/dark cards with soft glows and refined type; hover reveals a faint procedural pattern."
+        }
+      },
+      "constraints": {
+        "minCards": 3,
+        "maxCards": 6,
+        "preferredCards": 6
+      },
+      "imagePolicy": {
+        "allowImages": false
+      }
+    },
+    {
+      "name": "YearRoadmapTimeline",
+      "propsSchema": {
+        "items": "Array<{ year: string, title: string, description: string }>",
+        "className": "string"
+      },
+      "import": "import YearRoadmapTimeline from '@/components/sections/layouts/roadmap/YearRoadmapTimeline';",
+      "path": "@/components/sections/layouts/roadmap/YearRoadmapTimeline",
+      "category": "roadmap",
+      "baseGenerationEligible": true,
+      "description": "Year-based roadmap with a left column of years and a right panel of milestones for the active year. No images. Supports click/scroll activation.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Bold, oversized year numerals on the left with punchy accent dots and outline dividers; high-contrast cards on the right.",
+          "futuristic_premium": "Soft glow starfield/gradient backdrop, subtle divider line, muted inactive years, and sleek milestone typography."
+        }
+      },
+      "constraints": {
+        "minYears": 3,
+        "maxYears": 6,
+        "preferredYears": 4,
+        "yearIncrementStep": 1,
+        "entriesPerYear": {
+          "min": 3,
+          "max": 6,
+          "preferred": 4
+        },
+        "textRules": {
+          "heading": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 36
+          },
+          "explainer": {
+            "required": false,
+            "minChars": 60,
+            "maxChars": 260
+          },
+          "year": {
+            "required": true,
+            "example": "2024"
+          },
+          "title": {
+            "required": true,
+            "minChars": 4,
+            "maxChars": 40,
+            "example": "Project Genesis"
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 32,
+            "maxChars": 220,
+            "example": "Foundation phase with research, team assembly, initial funding, and core infrastructure."
+          }
+        }
+      }
+    },
+    {
+      "name": "VerticalCardRoadmap",
+      "propsSchema": {
+        "items": "Array<{ title: string, description: string, video: string, image: string }>",
+        "title": "string",
+        "className": "string"
+      },
+      "import": "import VerticalCardRoadmap from '@/components/sections/layouts/roadmap/VerticalCardRoadmap';",
+      "path": "@/components/sections/layouts/roadmap/VerticalCardRoadmap",
+      "category": "roadmap",
+      "baseGenerationEligible": true,
+      "description": "A scroll-driven roadmap where tall cards slide into view vertically. Each card shows a mascot image, a phase title, and a short subtitle; hovering/focusing reveals an optional detail overlay. Great for product or project roadmaps with visual storytelling.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful, high-contrast cards with chunky borders, subtle drop shadows, and animated pop-in effects.",
+          "futuristic_premium": "Glass/dark cards with soft radiance, depth blur, and smooth fade/scale entrances."
+        }
+      },
+      "constraints": {
+        "minCards": 3,
+        "maxCards": 7,
+        "preferredCount": 5
+      }
+    },
+    {
+      "import": "import ProcessRoadmapTimeline from @/components/sections/layouts/roadmap/ProcessRoadmap';",
+      "propsSchema": {
+        "items": "Array<{ id: string, title: string, description: string, image: string, items: Array<{ icon: LucideIcon, text: string }>, reverse: boolean }>",
+        "className": "string"
+      },
+      "name": "ProcessRoadmap",
+      "category": "roadmap",
+      "path": "@/components/sections/layouts/roadmap/ProcessRoadmap",
+      "description": "Alternating process timeline. Each step shows an image, a title, a subtitle, and exactly three key points.",
+      "details": "Use for describing phased processes (research, design, build, etc.). Cards alternate left/right around a central line with step markers. Every card requires one image plus text (title, subtitle, and three concise bullet points).",
+      "constraints": {
+        "minCards": 3,
+        "maxCards": 5,
+        "preferredCount": 3,
+        "imageRules": {
+          "requiredPerCard": 1,
+          "altRequired": true,
+          "example": "https://example.com/phase-1.jpg"
+        },
+        "textRules": {
+          "title": {
+            "required": true,
+            "minChars": 6,
+            "maxChars": 36,
+            "example": "Research & Discovery Phase"
+          },
+          "subtitle": {
+            "required": true,
+            "minChars": 24,
+            "maxChars": 160,
+            "example": "Initial research and planning with user interviews, competitive analysis, and feasibility studies."
+          },
+          "points": {
+            "required": true,
+            "requiredCount": 3,
+            "minCharsPerPoint": 8,
+            "maxCharsPerPoint": 64,
+            "examples": [
+              "Market analysis & user research",
+              "Competitive benchmarking",
+              "Technical feasibility review"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "CentralFAQ",
+      "import": "import CentralFAQ from '@/components/sections/layouts/faq/CentralFAQ';",
+      "path": "@/components/sections/layouts/faq/CentralFAQ",
+      "propsSchema": {
+        "items": "Array<{ title: string, content: string }>"
+      },
+      "category": "faq",
+      "baseGenerationEligible": true,
+      "description": "Centered FAQ section with a big title and short lead copy above a clean accordion list. Each row expands to reveal the answer. No images.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Playful, high-contrast title (e.g., “F.A.Q.”) with chunky buttons and outlined rows.",
+          "futuristic_premium": "Soft glows, glassy rows, rounded corners, and a refined plus toggle on the right."
+        }
+      },
+      "rules": {
+        "images": {
+          "use": "none"
+        },
+        "layout": "centered",
+        "toggles": {
+          "keyboardAccessible": true
+        }
+      }
+    },
+    {
+      "name": "ImageFAQ",
+      "import": "import ImageFAQ from '@/components/sections/layouts/faq/ImageFAQ';",
+      "path": "@/components/sections/layouts/faq/ImageFAQ",
+      "category": "faq",
+      "style": ["fun_trendy"],
+      "propsSchema": {
+        "items": "Array<{ title: string, content: string }>"
+      },
+      "baseGenerationEligible": true,
+      "description": "FAQ with a pinned media block on the left and an accordion list on the right. Bold, playful styling.",
+      "rules": {
+        "accordion": {
+          "min": 3,
+          "max": 10,
+          "preferred": 6
+        },
+        "media": {
+          "required": true,
+          "altRequired": true
+        }
+      }
+    },
+    {
+      "name": "BentoFAQ",
+      "category": "faq",
+      "propsSchema": {
+        "items": "Array<{ title: string, content: string }>"
+      },
+      "import": "import BentoFAQ from '@/components/sections/layouts/faq/BentoFAQ';",
+      "path": "@/components/sections/layouts/faq/BentoFAQ",
+      "style": ["fun_trendy"],
+      "baseGenerationEligible": true,
+      "description": "Bento-style FAQ grid: questions appear as tiles in 2 columns and expand in place to reveal the answer. Playful, high-contrast styling. No images.",
+      "rules": {
+        "layout": {
+          "minColumns": 2,
+          "maxColumns": 3,
+          "preferredColumns": 2
+        },
+        "images": {
+          "use": "none"
+        }
+      }
+    },
+    {
+      "name": "FooterBase",
+      "import": "import FooterBase from '@/components/footer/FooterBase'",
+      "propsSchema": {
+        "logoSrc": "string",
+        "logoWidth": "number",
+        "logoHeight": "number",
+        "columns": "Array<{ title: string, items: Array<{ label: string, onClick: function }> }>",
+        "copyrightText": "string",
+        "onPrivacyClick": "function",
+        "className": "string",
+        "containerClassName": "string",
+        "logoClassName": "string",
+        "columnsClassName": "string",
+        "columnClassName": "string",
+        "columnTitleClassName": "string",
+        "columnItemClassName": "string",
+        "copyrightContainerClassName": "string",
+        "copyrightTextClassName": "string",
+        "privacyButtonClassName": "string",
+        "gradientClassName": "string",
+        "gradientStyle": "React.CSSProperties",
+        "backgroundBlobClassName": "string",
+        "backgroundBlobStyle": "React.CSSProperties",
+        "hideGradient": "boolean",
+        "hideBackgroundBlob": "boolean"
+      },
+      "category": "footer",
+      "baseGenerationEligible": true,
+      "description": "Compact footer with a text brand mark at top-left and three labeled columns of small chip buttons. Includes a thin divider, left-aligned copyright, and an optional single fine-print action (e.g., Privacy Policy) pinned to the bottom-right.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Bright canvas with playful pill buttons, soft shadows, and rounded corners.",
+          "futuristic_premium": "Dark/glass gradient canvas with subtle glow and minimal, refined pill buttons."
+        }
+      },
+      "constraints": {
+        "minColumns": 3,
+        "maxColumns": 3,
+        "preferredColumns": 3,
+        "buttonsPerColumn": {
+          "min": 2,
+          "max": 4,
+          "preferred": 4
+        },
+        "textRules": {
+          "brandText": {
+            "required": true,
+            "minChars": 2,
+            "maxChars": 24
+          },
+          "columnTitle": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 20
+          },
+          "buttonLabel": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 32
+          }
+        }
+      },
+      "layoutHints": {
+        "columns": 3,
+        "chipStyle": "pill",
+        "showDivider": true,
+        "copyrightAlign": "left",
+        "finePrintButtonAlign": "right",
+        "maxWidth": "full",
+        "gridGutter": "lg"
+      },
+      "imagePolicy": {
+        "allowImages": false
+      }
+    },
+    {
+      "name": "FooterLogo",
+      "category": "footer",
+      "propsSchema": {
+        "logoSrc": "string",
+        "logoAlt": "string",
+        "logoText": "string",
+        "className": "string",
+        "svgClassName": "string"
+      },
+      "import": "import FooterLogo from '@/components/footer/FooterLogo'",
+      "baseGenerationEligible": true,
+      "description": "Large text-based brandmark footer with a multi-column grid of small chip buttons. The oversized wordmark sits behind/above while button groups are arranged in columns.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Bright canvas with playful pill buttons and rounded corners.",
+          "futuristic_premium": "Dark/glass gradient canvas, glowing wordmark, minimalist chip pills."
+        }
+      },
+      "constraints": {
+        "minColumns": 3,
+        "maxColumns": 5,
+        "preferredColumns": 5,
+        "buttonsPerColumn": {
+          "min": 2,
+          "max": 5,
+          "preferred": 4
+        },
+        "textRules": {
+          "wordmark": {
+            "required": true,
+            "minChars": 2,
+            "maxChars": 24
+          },
+          "buttonLabel": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 36
+          }
+        }
+      },
+      "layoutHints": {
+        "wordmarkTreatment": "oversized_background_centered",
+        "chipStyle": "pill_with_chevron",
+        "gridGutter": "lg",
+        "maxWidth": "full"
+      }
+    },
+    {
+      "name": "FooterLogoEmphasis",
+      "category": "footer",
+      "import": "import FooterLogoEmphasis from '@/components/footer/FooterLogoEmphasis'",
+      "propsSchema": {
+        "logoSrc": "string",
+        "logoAlt": "string",
+        "columns": "Array<{ items: Array<{ label: string, onClick: function }> }>",
+        "logoText": "string",
+        "className": "string",
+        "containerClassName": "string",
+        "logoClassName": "string",
+        "columnsClassName": "string",
+        "columnClassName": "string",
+        "itemClassName": "string",
+        "iconClassName": "string",
+        "buttonClassName": "string",
+        "gradientClassName": "string",
+        "gradientStyle": "React.CSSProperties",
+        "backgroundBlobClassName": "string",
+        "backgroundBlobStyle": "React.CSSProperties",
+        "hideGradient": "boolean",
+        "hideBackgroundBlob": "boolean"
+      },
+      "baseGenerationEligible": true,
+      "description": "Footer with prominent logo display and columnar navigation links with chevron icons. Features optional gradient header and background blob effects.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Clean white background with blue accent chevrons and rounded corners.",
+          "futuristic_premium": "Dark glass background with glowing effects and premium styling."
+        }
+      },
+      "constraints": {
+        "minColumns": 2,
+        "maxColumns": 5,
+        "preferredColumns": 4,
+        "itemsPerColumn": {
+          "min": 2,
+          "max": 6,
+          "preferred": 4
+        },
+        "textRules": {
+          "logoText": {
+            "required": false,
+            "minChars": 2,
+            "maxChars": 24
+          },
+          "linkLabel": {
+            "required": true,
+            "minChars": 3,
+            "maxChars": 32
+          }
+        }
+      },
+      "layoutHints": {
+        "logoTreatment": "prominent_top_center",
+        "navigationStyle": "chevron_links",
+        "gridLayout": "responsive_columns",
+        "backgroundEffects": "optional_gradient_blob",
+        "maxWidth": "container"
+      }
+    },
+    {
+      "name": "FooterLogoEmphasisBackgroundGradient",
+      "category": "footer",
+      "import": "import FooterLogoEmphasisBackgroundGradient from '@/components/footer/FooterLogoEmphasisBackgroundGradient'",
+      "propsSchema": {
+        "logoSrc": "string",
+        "logoAlt": "string",
+        "logoText": "string",
+        "items": "Array<{ label: string, onClick: function }>",
+        "className": "string",
+        "containerClassName": "string",
+        "gradientClassName": "string",
+        "gradientStyle": "React.CSSProperties",
+        "logoClassName": "string",
+        "itemsClassName": "string",
+        "itemClassName": "string",
+        "buttonClassName": "string"
+      },
+      "baseGenerationEligible": true,
+      "description": "Full-bleed gradient footer that showcases ONLY the brand wordmark as large text. No buttons or links—just a bold, oversized logotype on a smooth gradient backdrop.",
+      "styleSupport": {
+        "availableStyles": ["fun_trendy", "futuristic_premium"],
+        "styleDescriptions": {
+          "fun_trendy": "Warm/candy gradients with soft vignette and rounded container corners.",
+          "futuristic_premium": "Deep night gradients with subtle glow/vignette and premium curvature."
+        }
+      },
+      "constraints": {
+        "textRules": {
+          "brandText": {
+            "required": true,
+            "minChars": 2,
+            "maxChars": 24
+          }
+        },
+        "disallowLinks": true,
+        "disallowImages": true
+      },
+      "layoutHints": {
+        "logoTreatment": "oversized_centered_text",
+        "gradientBackdrop": "enabled",
+        "cornerRadius": "xl",
+        "maxHeight": "auto",
+        "maxWidth": "full",
+        "vignette": true
+      },
+      "imagePolicy": {
+        "allowImages": false
+      }
+    }
+  ]
+}
